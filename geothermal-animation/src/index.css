@@ -1,0 +1,19 @@
+
+.page {
+    display: grid;
+    grid: 98vh / 1fr 4fr;
+    overflow: hidden;
+}
+.season {
+    text-align: center;
+    padding-right:20%;
+    padding-top:10%;
+    font-size:4vw;
+
+}
+.wrapper {
+    overflow: scroll;
+}
+img {
+    width:150%;
+}
