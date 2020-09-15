@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import map from './Geothermal_920am_May_6_2019.jpg';
+import map from './Geothermal Schematic.jpg';
 
 console.log(map);
 

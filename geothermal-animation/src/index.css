@@ -6,8 +6,7 @@
 }
 .season {
     text-align: center;
-    padding-right:20%;
-    padding-top:10%;
+    padding-top:5vh;
     font-size:4vw;
 
 }
@@ -15,5 +14,5 @@
     overflow: scroll;
 }
 img {
-    width:150%;
+    width:100%;
 }
