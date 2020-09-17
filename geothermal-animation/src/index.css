@@ -8,11 +8,20 @@
     text-align: center;
     padding-top:5vh;
     font-size:4vw;
+    width: 20vw;
 
 }
 .wrapper {
-    overflow: scroll;
+    overflow: auto;
+    position:relative;
+    top:0px;
+    left: 0px;
 }
-img {
-    width:100%;
+#map-container {
+    position: relative;
+    top:0px;
+    left: 0px;
+}
+#map {
+    width:78vw;
 }
