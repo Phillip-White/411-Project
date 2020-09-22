@@ -1,27 +1,29 @@
+//create javascript function to assign coords to a var
+
+
 window.onload = function () { arrows() };
-const screenWidth = document.documentElement.clientWidth;
-const screenHeight = document.documentElement.clientHeight;
-const PxToVw = 100 / screenWidth;
-const PxToVh = 100 / screenHeight;
+
 
 function arrows() {
-    arrowWidth();
-    arrowLocation();
+    arrowLocation(6400, 9284);
 }
 
+function arrowLocation(x, y) {
+    const arrow = document.getElementById("arrow");
+    const map = document.getElementById("map");
+    const pxToVw = 100 / (document.documentElement.clientWidth);
+    const pxToVh = 100 / (document.documentElement.clientHeight);
 
+    var picWidth = map.clientWidth;
+    var picHeight = map.clientHeight;
+    var arrowWidth = arrow.clientWidth
+    var arrowHeight = arrow.clientHeight
 
-function arrowWidth() {
-    var x = 15 * PxToVw;
-    document.getElementById("arrow").style.width = x + 'vw';
-}
+    x = x / 14400 * picWidth;
+    y = y / 10800 * picHeight;
 
-function arrowLocation() {
-    var x = 6545 / 14400 * screenWidth * .78;
-    var y = 3400 / 10800 * document.getElementById("map").clientHeight;
+    arrow.style.position = "absolute";
 
-    document.getElementById("arrow").style.position = "absolute";
-
-    document.getElementById("arrow").style.left = (x - 7) * PxToVw + 'vw';
-    document.getElementById("arrow").style.top = y * PxToVh + 'vw';
+    arrow.style.left = ((x - (arrowWidth / 2)) * pxToVw)  + 'vw';
+    arrow.style.top = ((y - (arrowHeight / 2)) * pxToVh)  + 'vh';
 }
