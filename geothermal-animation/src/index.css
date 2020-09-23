@@ -25,6 +25,13 @@
 #map {
     width:78vw;
 }
-#arrow {
-    width: 1vw;
+.arrow {
+    position:absolute;
+}
+.area {
+    background-color: blue;
+    opacity:.1;
+    position: absolute;
+}
+#CoolingTower {
 }
