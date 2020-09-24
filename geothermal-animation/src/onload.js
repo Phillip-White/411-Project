@@ -32,7 +32,6 @@ function arrowTranspose() {
         arrow[i].style.left = (x * pxToVw) + 'vw';
         arrow[i].style.top = (y * pxToVh) + 'vh';
     }
-
 }
 
 function arrowSize() {
@@ -57,14 +56,10 @@ function transposeAreaSize() {
         var x2 = area[i].style.width.match(/\d+/g);
         var y2 = area[i].style.height.match(/\d+/g);
 
-        document.getElementById("x").innerHTML = x2;
-
-
         x1 = (x1 / 14400) * picWidth;
         y1 = (y1 / 10800) * picHeight;
         x2 = (x2 / 14400) * picWidth;
-        y2 = (y2 / 10800) * picHeight;
-
+        y2 = (y2 / 10800) * picHeight; 
 
         area[i].style.left = (x1 * pxToVw) + 'vw';
         area[i].style.top = (y1 * pxToVh) + 'vh';

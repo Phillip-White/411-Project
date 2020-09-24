@@ -30,8 +30,27 @@
 }
 .area {
     background-color: blue;
-    opacity:.1;
+    opacity:.2;
     position: absolute;
 }
-#CoolingTower {
+
+#pop-up{
+    max-height: 40vh;
+    width: 20vw;
+    position:absolute;
+    bottom:2vh;
+}
+#pop-up-image{
+    max-height:15vh;
+    max-width: 20vw;
+}
+#tab{
+    padding-left:50px;
+
+}
+#words{
+    max-height:25vh;
+    font-size:.4em;
+    width: 20vw;
+    overflow:auto;
 }
