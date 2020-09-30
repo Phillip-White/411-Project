@@ -10,18 +10,50 @@ import './index.css';
 import map from './Geothermal Schematic.jpg';
 import arrow from './blue_flow_arrow.png';
 import arrow2 from './heat_flow_arrow.png';
+import CoolingTower from './CoolingTower.jpg';
+import VrfCondensor from './VRFCondensor.jpg';
+import CoolingTowerControlPanel from './CoolingTowerControlPanel.jpg';
+import Boiler from './Boiler.jpg';
+import OutsideAirUnit from './OutsideAirUnit.jpg';
+
 import './onload.js';
 import axios from 'axios';
 
 
-function visibility() {
-    document.getElementById("pop-up").style.visibility = "visible";
-}
 
 class Animation extends React.Component {
 
+    visibility = (el) => {
+        if (el == "CoolingTower") {
+            document.getElementById("pop-up-image").src = CoolingTower;
+
+        }
+        else if (el == "VrfCondensor") {
+            document.getElementById("pop-up-image").src = VrfCondensor;
+
+        }
+        else if (el == "CoolingTowerControlPanel") {
+            document.getElementById("pop-up-image").src = CoolingTowerControlPanel;
+
+        }
+        else if (el == "Boiler") {
+            document.getElementById("pop-up-image").src = Boiler;
+
+        }
+        else if (el == "OutsideAirUnit") {
+            document.getElementById("pop-up-image").src = OutsideAirUnit;
+        }
+
+         document.getElementById("pop-up").style.visibility = "visible";
+
+
+    };
+
+
+
     render() {
         return (
+
 
             <div className="page" id="page">
 
@@ -45,16 +77,17 @@ class Animation extends React.Component {
                     <div id = "map-container">
                         <img src={map} id="map" alt="Geothermal System" />
                         <div id="click-container">
-                            <div className="area" onClick={visibility} id="CoolingTower" style={{ left: 5360, top: 8288, width: 872, height: 1084 }}></div>
-                            <div className="area" onClick={visibility} id="CoolingTowerControlPanel" style={{ left: 6356, top: 8740, width: 224, height: 364 }}></div>
-                            <div className="area" onClick={visibility} id="OutsideAirUnit1" style={{ left: 7308, top: 600, width: 472, height: 532 }}></div>
-                            <div className="area" onClick={visibility} id="OutsideAirUnit2" style={{ left: 11508, top: 572, width: 476, height: 560 }}></div>
-                            <div className="area" onClick={visibility} id="VrfCondensor1" style={{ left: 5536, top: 7244, width: 436, height: 424 }}></div>
-                            <div className="area" onClick={visibility} id="VrfCondensor2" style={{ left: 7936, top: 7544, width: 452, height: 424 }}></div>
-                            <div className="area" onClick={visibility} id="VrfCondensor3" style={{ left: 9852, top: 6684, width: 460, height: 420 }}></div>
-                            <div className="area" onClick={visibility} id="VrfCondensor4" style={{ left: 12028, top: 7040, width: 436, height: 432 }}></div>
-                            <div className="area" onClick={visibility} id="Boiler" style={{ left: 6232, top: 6952, width: 248, height: 360 }}></div>
+                            <div className="area" onClick={() => this.visibility("CoolingTower")} title="Cooling Tower" name="CoolingTower" id="CoolingTower" style={{ left: 5360, top: 8288, width: 872, height: 1084 }}></div>
+                            <div className="area" onClick={() => this.visibility("CoolingTowerControlPanel")} id="CoolingTowerControlPanel" style={{ left: 6356, top: 8740, width: 224, height: 364 }}></div>
+                            <div className="area" onClick={() => this.visibility("OutsideAirUnit")} id="OutsideAirUnit1" style={{ left: 7308, top: 600, width: 472, height: 532 }}></div>
+                            <div className="area" onClick={() => this.visibility("OutsideAirUnit")} id="OutsideAirUnit2" style={{ left: 11508, top: 572, width: 476, height: 560 }}></div>
+                            <div className="area" onClick={() => this.visibility("VrfCondensor")} id="VrfCondensor1" style={{ left: 5536, top: 7244, width: 436, height: 424 }}></div>
+                            <div className="area" onClick={() => this.visibility("VrfCondensor")} id="VrfCondensor2" style={{ left: 7936, top: 7544, width: 452, height: 424 }}></div>
+                            <div className="area" onClick={() => this.visibility("VrfCondensor")} id="VrfCondensor3" style={{ left: 9852, top: 6684, width: 460, height: 420 }}></div>
+                            <div className="area" onClick={() => this.visibility("VrfCondensor")} id="VrfCondensor4" style={{ left: 12028, top: 7040, width: 436, height: 432 }}></div>
+                            <div className="area" onClick={() => this.visibility("Boiler")} id="Boiler" style={{ left: 6232, top: 6952, width: 248, height: 360 }}></div>
                         </div>
+                       
 
                         <div id="arrow-container">
                             <img src={arrow} alt="arrow" className="arrow" name="outArrows" id="1" style={{ left: 7968, top: 882 }} />
@@ -129,7 +162,6 @@ class Animation extends React.Component {
         );
     }
 }
-
 
 
 
