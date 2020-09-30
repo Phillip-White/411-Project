@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import {
+    BrowserRouter as Router,
+    Link,
+    Route,
+    Switch
+} from 'react-router-dom';
 import './index.css';
 import map from './Geothermal Schematic.jpg';
 import arrow from './blue_flow_arrow.png';
+import arrow2 from './heat_flow_arrow.png';
 import './onload.js';
+import axios from 'axios';
 
 
 function visibility() {
     document.getElementById("pop-up").style.visibility = "visible";
 }
-
 
 class Animation extends React.Component {
 
@@ -19,16 +26,18 @@ class Animation extends React.Component {
             <div className="page" id="page">
 
                 <div className="season">
-                    <a onClick = "Summer()">Summer</a>
-                    <p></p>
-                    <a onClick="Winter">Winter</a>
+                    <Router>
+                        <h3><Link to = "/summer">Summer</Link></h3>
+                        <h3><Link to = "/winter">Winter</Link></h3>
+                        <h3><Link to = "/info">Info</Link></h3>
+                    </Router>
                     <div id="pop-up" style={{ visibility: 'hidden' }}>
                         <img src={arrow} id="pop-up-image" />
                         <div id="words">
                             <p id="desc">
                                 <span id="tab"></span>
-                                I know a bit of it, but I'm not very good at it. I'm also not very good at French. I barely know anything in French, and my pronunciation probably sucks. But I'm learning it, at least. I'm also learning Esperanto. It's this language that was made up by some guy a long time ago to be the "universal language". A lot of people speak it. I am such a language nerd. Half of this text is probably gonna be about languages. But hey, as long as it's long! Ha, get it? As LONG as it's LONG? I'm so funny, right? No, I'm not. I should probably get some sleep. Goodnight! Hello, I'm back again. I basically have only two interests nowadays: languages and furries. What? Oh, sorry, I thought you knew I was a furry. Haha, oops. Anyway, yeah, I'm a furry, but since I'm a young furry, I can't really do as much as I would like to do in the fandom. When I'm older, I would like to have a fursuit, go to furry conventions, all that stuff. But for now I can only dream of that. Sorry you had to deal with me talking about furries, but I'm honestly very desperate for this to be the longest text ever. Last night I was watching nothing but fursuit unboxings. I think I need help. This one time, me and my mom were going to go to a furry Christmas party, but we didn't end up going because of the fact that there was alcohol on the premises, and that she didn't wanna have to be a mom dragging her son through a crowd of furries. Both of those reasons were understandable. Okay, hopefully I won't have to talk about furries anymore. I don't care if you're a furry reading this right now, I just don't wanna have to torture everyone else. I will no longer say the F word throughout the rest of this entire text. Of course, by the F word, I mean the one that I just used six times, not the one that you're probably thinking of which I have not used throughout this entire text. I just realised that next year will be 2020. That's crazy! It just feels so futuristic! It's also crazy that the 2010s decade is almost over. That decade brought be a lot of memories. In fact, it brought be almost all of my memories. It'll be sad to see it go. I'm gonna work on a series of video lessons for Toki Pona. I'll expain what Toki Pona is after I come back. Bye! I'm back now, and I decided not to do it on Toki Pona, since many other people have done Toki Pona video lessons already. I decided to do it on Viesa, my English code. Now, I shall explain what Toki Pona is. Toki Pona is a minimalist constructed language that has only ~120 words! That means you can learn it very quickly. I reccomend you learn it! It's pretty fun and easy! Anyway, yeah, I might finish my video about Viesa later. But for now, I'm gonna add more to this giant wall of text, because I want it to be the longest! It would be pretty cool to have a world record for the longest text ever. Not sure how famous I'll get from it, but it'll be cool nonetheless. Nonetheless. That's an interesting word. It's a combination of three entire words. That's pretty neat. Also, remember when I said that I said the F word six times throughout this text? I actually messed up there. I actually said it ten times (including the plural form). I'm such a liar! I struggled to spell the word "liar" there. I tried spelling it "lyer", then "lier". Then I remembered that it's "liar". At least I'm better at spelling than my sister. She's younger than me, so I guess it's understandable. "Understandable" is a pretty long word. Hey, I wonder what the most common word I've used so far in this text is. I checked, and appearantly it's "I", with 59 uses! The word "I" makes up 5% of the words this text! I would've thought "the" would be the most common, but "the" is only the second most used word, with 43 uses. "It" is the third most common, followed by "a" and "to". Congrats to those five words! If you're wondering what the least common word is, well, it's actually a tie between a bunch of words that are only used once, and I don't wanna have to list them all here. Remember when I talked about waffles near the beginning of this text? Well, I just put some waffles in the toaster, and I got reminded of the very beginnings of this longest text ever. Okay, that was literally yesterday, but I don't care. You can't see me right now, but I'm typing with my nose! Okay, I was not able to type the exclamation point with just my nose. I had to use my finger. But still, I typed all of that sentence with my nose! I'm not typing with my nose right now, because it takes too long, and I wanna get this text as long as possible quickly. I'm gonna take a break for now! Bye! Hi, I'm back again. My sister is beside me, watching me write in this endless wall of text. My sister has a new thing where she just says the word "poop" nonstop. I don't really like it. She also eats her own boogers. I'm not joking.
-                            </p>
+                                    I know a bit of it, but I'm not very good at it. I'm also not very good at French. I barely know anything in French, and my pronunciation probably sucks. But I'm learning it, at least. I'm also learning Esperanto. It's this language that was made up by some guy a long time ago to be the "universal language". A lot of people speak it. I am such a language nerd. Half of this text is probably gonna be about languages. But hey, as long as it's long! Ha, get it? As LONG as it's LONG? I'm so funny, right? No, I'm not. I should probably get some sleep. Goodnight! Hello, I'm back again. I basically have only two interests nowadays: languages and furries. What? Oh, sorry, I thought you knew I was a furry. Haha, oops. Anyway, yeah, I'm a furry, but since I'm a young furry, I can't really do as much as I would like to do in the fandom. When I'm older, I would like to have a fursuit, go to furry conventions, all that stuff. But for now I can only dream of that. Sorry you had to deal with me talking about furries, but I'm honestly very desperate for this to be the longest text ever. Last night I was watching nothing but fursuit unboxings. I think I need help. This one time, me and my mom were going to go to a furry Christmas party, but we didn't end up going because of the fact that there was alcohol on the premises, and that she didn't wanna have to be a mom dragging her son through a crowd of furries. Both of those reasons were understandable. Okay, hopefully I won't have to talk about furries anymore. I don't care if you're a furry reading this right now, I just don't wanna have to torture everyone else. I will no longer say the F word throughout the rest of this entire text. Of course, by the F word, I mean the one that I just used six times, not the one that you're probably thinking of which I have not used throughout this entire text. I just realised that next year will be 2020. That's crazy! It just feels so futuristic! It's also crazy that the 2010s decade is almost over. That decade brought be a lot of memories. In fact, it brought be almost all of my memories. It'll be sad to see it go. I'm gonna work on a series of video lessons for Toki Pona. I'll expain what Toki Pona is after I come back. Bye! I'm back now, and I decided not to do it on Toki Pona, since many other people have done Toki Pona video lessons already. I decided to do it on Viesa, my English code. Now, I shall explain what Toki Pona is. Toki Pona is a minimalist constructed language that has only ~120 words! That means you can learn it very quickly. I reccomend you learn it! It's pretty fun and easy! Anyway, yeah, I might finish my video about Viesa later. But for now, I'm gonna add more to this giant wall of text, because I want it to be the longest! It would be pretty cool to have a world record for the longest text ever. Not sure how famous I'll get from it, but it'll be cool nonetheless. Nonetheless. That's an interesting word. It's a combination of three entire words. That's pretty neat. Also, remember when I said that I said the F word six times throughout this text? I actually messed up there. I actually said it ten times (including the plural form). I'm such a liar! I struggled to spell the word "liar" there. I tried spelling it "lyer", then "lier". Then I remembered that it's "liar". At least I'm better at spelling than my sister. She's younger than me, so I guess it's understandable. "Understandable" is a pretty long word. Hey, I wonder what the most common word I've used so far in this text is. I checked, and appearantly it's "I", with 59 uses! The word "I" makes up 5% of the words this text! I would've thought "the" would be the most common, but "the" is only the second most used word, with 43 uses. "It" is the third most common, followed by "a" and "to". Congrats to those five words! If you're wondering what the least common word is, well, it's actually a tie between a bunch of words that are only used once, and I don't wanna have to list them all here. Remember when I talked about waffles near the beginning of this text? Well, I just put some waffles in the toaster, and I got reminded of the very beginnings of this longest text ever. Okay, that was literally yesterday, but I don't care. You can't see me right now, but I'm typing with my nose! Okay, I was not able to type the exclamation point with just my nose. I had to use my finger. But still, I typed all of that sentence with my nose! I'm not typing with my nose right now, because it takes too long, and I wanna get this text as long as possible quickly. I'm gonna take a break for now! Bye! Hi, I'm back again. My sister is beside me, watching me write in this endless wall of text. My sister has a new thing where she just says the word "poop" nonstop. I don't really like it. She also eats her own boogers. I'm not joking.
+                                </p>
                         </div>
                     </div>
                 </div>
@@ -48,7 +57,7 @@ class Animation extends React.Component {
                         </div>
 
                         <div id="arrow-container">
-                            <img src={arrow} alt="arrow" className="arrow" id="1" style={{ left: 7968, top: 882 }} />
+                            <img src={arrow} alt="arrow" className="arrow" name="outArrows" id="1" style={{ left: 7968, top: 882 }} />
                             <img src={arrow} alt="arrow" className="arrow" id="2" style={{ left: 7980, top: 1069 }} />
                             <img src={arrow} alt="arrow" className="arrow" id="3" style={{ left: 7420, top: 1392 }} />
                             <img src={arrow} alt="arrow" className="arrow" id="4" style={{ left: 6748, top: 1780 }} />
@@ -90,24 +99,24 @@ class Animation extends React.Component {
                             <img src={arrow} alt="arrow" className="arrow" id="40" style={{ left: 3580, top: 5896 }} />
                             <img src={arrow} alt="arrow" className="arrow" id="41" style={{ left: 3943, top: 6204 }} />
                             <img src={arrow} alt="arrow" className="arrow" id="42" style={{ left: 3855, top: 6594 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="1" style={{ left: 12160, top: 874 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="2" style={{ left: 12072, top: 1083 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="3" style={{ left: 11555, top: 1386 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="4" style={{ left: 10879, top: 1776 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="5" style={{ left: 10710, top: 2227 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="6" style={{ left: 10710, top: 3127 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="7" style={{ left: 10710, top: 4027 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="8" style={{ left: 10710, top: 4927 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="9" style={{ left: 10710, top: 5827 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="10" style={{ left: 10710, top: 6727 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="11" style={{ left: 10626, top: 7084 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="12" style={{ left: 10659, top: 7232 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="13" style={{ left: 10433, top: 7227 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="14" style={{ left: 9856, top: 7436 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="15" style={{ left: 9218, top: 7804 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="16" style={{ left: 8530, top: 8200 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="17" style={{ left: 7969, top: 8200 }} />
-                            <img src={arrow} alt="arrow" className="arrow" id="18" style={{ left: 7128, top: 7722 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="43" style={{ left: 12160, top: 874 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="44" style={{ left: 12072, top: 1083 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="45" style={{ left: 11555, top: 1386 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="46" style={{ left: 10879, top: 1776 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="47" style={{ left: 10710, top: 2227 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="48" style={{ left: 10710, top: 3127 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="49" style={{ left: 10710, top: 4027 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="50" style={{ left: 10710, top: 4927 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="51" style={{ left: 10710, top: 5827 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="52" style={{ left: 10710, top: 6727 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="53" style={{ left: 10626, top: 7084 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="54" style={{ left: 10659, top: 7232 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="55" style={{ left: 10433, top: 7227 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="56" style={{ left: 9856, top: 7436 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="57" style={{ left: 9218, top: 7804 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="58" style={{ left: 8530, top: 8200 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="59" style={{ left: 7969, top: 8200 }} />
+                            <img src={arrow} alt="arrow" className="arrow" id="60" style={{ left: 7128, top: 7722 }} />
                         </div>
                     </div>
 

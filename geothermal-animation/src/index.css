@@ -6,8 +6,7 @@
 }
 .season {
     text-align: center;
-    padding-top:5vh;
-    font-size:4vw;
+    font-size:3vw;
     width: 20vw;
 
 }
@@ -45,7 +44,7 @@
     max-width: 20vw;
 }
 #tab{
-    padding-left:50px;
+    padding-left:40px;
 
 }
 #words{
@@ -53,4 +52,12 @@
     font-size:.4em;
     width: 20vw;
     overflow:auto;
+}
+#5{
+    display: inline-block;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
