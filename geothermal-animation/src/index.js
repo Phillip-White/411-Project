@@ -77,15 +77,31 @@ class Animation extends React.Component {
                     <div id = "map-container">
                         <img src={map} id="map" alt="Geothermal System" />
                         <div id="click-container">
-                            <div className="area" onClick={() => this.visibility("CoolingTower")} title="Cooling Tower" name="CoolingTower" id="CoolingTower" style={{ left: 5360, top: 8288, width: 872, height: 1084 }}></div>
-                            <div className="area" onClick={() => this.visibility("CoolingTowerControlPanel")} id="CoolingTowerControlPanel" style={{ left: 6356, top: 8740, width: 224, height: 364 }}></div>
-                            <div className="area" onClick={() => this.visibility("OutsideAirUnit")} id="OutsideAirUnit1" style={{ left: 7308, top: 600, width: 472, height: 532 }}></div>
-                            <div className="area" onClick={() => this.visibility("OutsideAirUnit")} id="OutsideAirUnit2" style={{ left: 11508, top: 572, width: 476, height: 560 }}></div>
-                            <div className="area" onClick={() => this.visibility("VrfCondensor")} id="VrfCondensor1" style={{ left: 5536, top: 7244, width: 436, height: 424 }}></div>
-                            <div className="area" onClick={() => this.visibility("VrfCondensor")} id="VrfCondensor2" style={{ left: 7936, top: 7544, width: 452, height: 424 }}></div>
-                            <div className="area" onClick={() => this.visibility("VrfCondensor")} id="VrfCondensor3" style={{ left: 9852, top: 6684, width: 460, height: 420 }}></div>
-                            <div className="area" onClick={() => this.visibility("VrfCondensor")} id="VrfCondensor4" style={{ left: 12028, top: 7040, width: 436, height: 432 }}></div>
-                            <div className="area" onClick={() => this.visibility("Boiler")} id="Boiler" style={{ left: 6232, top: 6952, width: 248, height: 360 }}></div>
+                            <div className="area" onClick={visibility} name="Cooling Tower" title="CoolingTower" id="CoolingTower" style={{ left: 5360, top: 8288, width: 872, height: 1084 }}></div>
+                            <div className="area" onClick={visibility} name="Cooling Tower Control Panel" title="CoolingTowerControlPanel" id="CoolingTowerControlPanel" style={{ left: 6356, top: 8740, width: 224, height: 364 }}></div>
+                            <div className="area" onClick={visibility} name="Outside Air Unit" title="OutsideAirUnit" id="OutsideAirUnit1" style={{ left: 7308, top: 600, width: 472, height: 532 }}></div>
+                            <div className="area" onClick={visibility} name="Outside Air Unit" title="OutsideAirUnit" id="OutsideAirUnit2" style={{ left: 11508, top: 572, width: 476, height: 560 }}></div>
+                            <div className="area" onClick={visibility} name="VRF Condensors" title="VrfCondensor" id="VrfCondensor1" style={{ left: 5536, top: 7244, width: 436, height: 424 }}></div>
+                            <div className="area" onClick={visibility} name="VRF Condensors" title="VrfCondensor" id="VrfCondensor2" style={{ left: 7936, top: 7544, width: 452, height: 424 }}></div>
+                            <div className="area" onClick={visibility} name="VRF Condensors" title="VrfCondensor" id="VrfCondensor3" style={{ left: 9852, top: 6684, width: 460, height: 420 }}></div>
+                            <div className="area" onClick={visibility} name="VRF Condensors" title="VrfCondensor" id="VrfCondensor4" style={{ left: 12028, top: 7040, width: 436, height: 432 }}></div>
+                            <div className="area" onClick={visibility} name="Boiler" title="Boiler" id="Boiler" style={{ left: 6232, top: 6952, width: 248, height: 360 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump1" style={{ left: 7812, top: 2132, width: 124, height: 224 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump2" style={{ left: 7812, top: 3440, width: 124, height: 208 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump3" style={{ left: 7816, top: 4720, width: 120, height: 228 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump4" style={{ left: 7812, top: 6112, width: 116, height: 236 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump5" style={{ left: 8364, top: 1812, width: 116, height: 236 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump6" style={{ left: 8364, top: 3108, width: 116, height: 228 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump7" style={{ left: 8360, top: 4404, width: 124, height: 228 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump8" style={{ left: 8364, top: 5804, width: 116, height: 236 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump9" style={{ left: 11992, top: 2100, width: 100, height: 240 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump10" style={{ left: 11988, top: 3404, width: 112, height: 228 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump11" style={{ left: 11976, top: 4692, width: 124, height: 236 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump12" style={{ left: 11980, top: 5896, width: 120, height: 232 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump13" style={{ left: 12528, top: 1788, width: 120, height: 240 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump14" style={{ left: 12532, top: 3084, width: 112, height: 240 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump15" style={{ left: 12532, top: 4380, width: 112, height: 236 }}></div>
+                            <div className="area" onClick={visibility} name="Heat Pump" title="HeatPump" id="HeatPump16" style={{ left: 12532, top: 5544, width: 112, height: 224 }}></div>
                         </div>
                        
 
