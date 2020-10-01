@@ -15,6 +15,7 @@ import VrfCondensor from './VRFCondensor.jpg';
 import CoolingTowerControlPanel from './CoolingTowerControlPanel.jpg';
 import Boiler from './Boiler.jpg';
 import OutsideAirUnit from './OutsideAirUnit.jpg';
+import HeatPump from './HeatPump.jpg';
 
 import './onload.js';
 import axios from 'axios';
@@ -42,6 +43,9 @@ class Animation extends React.Component {
         }
         else if (el == "OutsideAirUnit") {
             document.getElementById("pop-up-image").src = OutsideAirUnit;
+        }
+        else if (el == "HeatPump") {
+            document.getElementById("pop-up-image").src = HeatPump;
         }
 
          document.getElementById("pop-up").style.visibility = "visible";
