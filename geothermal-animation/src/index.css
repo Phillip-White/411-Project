@@ -16,3 +16,18 @@
 img {
     width:100%;
 }
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    font-size:medium;
+    padding-right:5vh;
+    padding-bottom:inherit;
+}
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    padding-right:5vh;
+    padding-bottom:inherit;
+}
