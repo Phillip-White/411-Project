@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import './index.css'
+import App from './App'
+
+/*
 import {
     BrowserRouter as Router,
     Link,
     Route,
     Switch
 } from 'react-router-dom';
-import './index.css';
 import map from './Geothermal Schematic.jpg';
 import arrow from './blue_flow_arrow.png';
 import arrow2 from './heat_flow_arrow.png';
@@ -18,11 +21,11 @@ import OutsideAirUnit from './OutsideAirUnit.jpg';
 
 import './onload.js';
 import axios from 'axios';
-
+*/
 
 
 class Animation extends React.Component {
-
+/*
     visibility = (el) => {
         if (el == "CoolingTower") {
             document.getElementById("pop-up-image").src = CoolingTower;
@@ -49,12 +52,13 @@ class Animation extends React.Component {
 
     };
 
-
+*/
 
     render() {
         return (
+            <App />
 
-
+/*
             <div className="page" id="page">
 
                 <div className="season">
@@ -158,6 +162,7 @@ class Animation extends React.Component {
                 </div>
 
             </div>
+            */
 
         );
     }

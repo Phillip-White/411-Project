@@ -68,3 +68,7 @@ function transposeAreaSize() {
         
     }
 }
+
+export default {
+    arrowTranspose, arrowSize, transposeAreaSize
+}
