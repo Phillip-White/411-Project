@@ -4,6 +4,7 @@ import ClickAreas from './ClickAreas'
 import Schematic from './pics/Geothermal Schematic.jpg'
 import ArrowList from './data/ArrowList'
 import ClickAreaList from './data/ClickAreaList'
+import { MapInteractionCSS } from 'react-map-interaction';
 import arrows from './onload.js'
 
 class Map extends React.Component {
@@ -24,13 +25,15 @@ class Map extends React.Component {
 
 		return (
 			<div className="wrapper" id="map-container">
-				<img alt="Schematic" src={Schematic} id="map" />
-				<div id="arrow-container">
-					{arrowData}
-				</div>
-				<div id="click-container">
-					{clickData}
-				</div>
+				<MapInteractionCSS>
+					<img alt="Schematic" src={Schematic} id="map" />
+					<div id="arrow-container">
+						{arrowData}
+					</div>
+					<div id="click-container">
+						{clickData}
+					</div>
+				</MapInteractionCSS>
 				arrows
 			</div>
 		)
