@@ -70,5 +70,5 @@ function transposeAreaSize() {
 }
 
 export default {
-    arrowTranspose, arrowSize, transposeAreaSize
+    arrowTranspose, arrowSize, transposeAreaSize, arrows
 }

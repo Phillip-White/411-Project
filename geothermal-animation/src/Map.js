@@ -4,6 +4,7 @@ import ClickAreas from './ClickAreas'
 import Schematic from './pics/Geothermal Schematic.jpg'
 import ArrowList from './data/ArrowList'
 import ClickAreaList from './data/ClickAreaList'
+import arrows from './onload.js'
 
 class Map extends React.Component {
 
@@ -17,18 +18,20 @@ class Map extends React.Component {
 
 	render() {
 
+		const click = this.props.click
 		const arrowData = this.state.listofarrows.map(item => <Arrows key={item.id} item={item} />)
-		const clickData = this.state.listofclick.map(area => <ClickAreas key={area.id} area={area} />)
+		const clickData = this.state.listofclick.map(area => <ClickAreas key={area.id} area={area} click={click} />)
 
 		return (
 			<div className="wrapper" id="map-container">
-				<img src={Schematic} id="map" />
+				<img alt="Schematic" src={Schematic} id="map" />
 				<div id="arrow-container">
 					{arrowData}
-					</div>
+				</div>
 				<div id="click-container">
 					{clickData}
 				</div>
+				arrows
 			</div>
 		)
 	}

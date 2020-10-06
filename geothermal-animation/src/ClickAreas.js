@@ -1,18 +1,23 @@
 import React from 'react'
-import fun from './onload'
 
-function ClickAreas(props) {
-    const areaStyle = {
-        left: props.area.left,
-        top: props.area.top,
-        width: props.area.width,
-        height: props.area.height
+
+class ClickAreas extends React.Component {
+
+    render() {
+        const areaStyle = {
+            left: this.props.area.left,
+            top: this.props.area.top,
+            width: this.props.area.width,
+            height: this.props.area.height
+        };
+
+        return (
+            <div>
+                <div className="area" onClick={() => this.props.click} title={this.props.area.title} id={this.props.area.id} name={this.props.area.name} style={areaStyle}>
+                </div >
+            </div>
+        )
     }
-    return (
-        <div className="area" title={props.area.title} id={props.area.id} name={props.area.name} style={areaStyle}>
-        </div>
-    )
-    fun.transposeAreaSize()
 }
 
 
