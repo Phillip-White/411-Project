@@ -52,6 +52,8 @@
     font-size:.4em;
     width: 20vw;
     overflow:auto;
+    text-align: justify;
+    
 }
 #5{
     display: inline-block;
@@ -60,4 +62,9 @@
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
 }
