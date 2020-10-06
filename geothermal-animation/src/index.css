@@ -6,13 +6,65 @@
 }
 .season {
     text-align: center;
-    padding-top:5vh;
-    font-size:4vw;
+    font-size:3vw;
+    width: 20vw;
 
 }
 .wrapper {
-    overflow: scroll;
+    overflow: auto;
+    position:relative;
+    top:0px;
+    left: 0px;
 }
-img {
-    width:100%;
+#map-container {
+    position: relative;
+    top:0px;
+    left: 0px;
+}
+#map {
+    width:78vw;
+}
+.arrow {
+    position:absolute;
+}
+.area {
+    background-color: blue;
+    opacity:.2;
+    position: absolute;
+}
+
+#pop-up{
+    max-height: 40vh;
+    width: 20vw;
+    position:absolute;
+    bottom:2vh;
+}
+#pop-up-image{
+    max-height:15vh;
+    max-width: 20vw;
+}
+#tab{
+    padding-left:40px;
+
+}
+#words{
+    max-height:25vh;
+    font-size:.4em;
+    width: 20vw;
+    overflow:auto;
+    text-align: justify;
+    
+}
+#5{
+    display: inline-block;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
 }

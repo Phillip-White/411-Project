@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+<<<<<<< HEAD
 import './index.css';
 import map from './Geothermal Schematic.jpg';
 import myImage from './blue_flow_arrow.jpg';
@@ -9,11 +10,16 @@ function myFunction(){
 }
 
 console.log(map);
+=======
+import './index.css'
+import App from './App'
+>>>>>>> 548cafd7182ba824f1bb8928ba26974637f3d026
 
 class Animation extends React.Component {
 
     render() {
         return (
+<<<<<<< HEAD
 
             <div className="page">
 
@@ -32,9 +38,13 @@ class Animation extends React.Component {
 
             </div>
 
+=======
+            <App />
+>>>>>>> 548cafd7182ba824f1bb8928ba26974637f3d026
         );
     }
 }
+
 
 
 
