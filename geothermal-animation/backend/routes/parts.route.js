@@ -1,5 +1,5 @@
 const router = require('express').Router();
-let Parts = require('./parts.model');
+let Parts = require('../modules/parts.model');
 
 router.route('/').get((req, res) => {
     Parts.find()
@@ -9,13 +9,23 @@ router.route('/').get((req, res) => {
 
 router.route('/add').post((req, res) => {
     const _id = req.body._id;
-    const part = req.body.part;
+    const name = req.body.name;
+    const title = req.body.title;
+    const left = Number(req.body.left);
+    const top = Number(req.body.top);
+    const width = Number(req.body.width);
+    const height = Number(req.body.height);
     const desc = req.body.desc;
 
     const newPart = new Parts({
         _id,
-        part,
-        desc
+        name,
+        title,
+        left,
+        top,
+        width,
+        height,
+        desc,
     });
 
     newPart.save()
