@@ -18,7 +18,7 @@ import OutsideAirUnit from './OutsideAirUnit.jpg';
 import HeatPump from './HeatPump.jpg';
 
 import './onload.js';
-import axios from 'axios';
+//import axios from 'axios';
 
 
 
