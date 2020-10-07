@@ -4,8 +4,13 @@ const schema = mongoose.Schema;
 
 const partsSchema = new schema({
     _id: { type: String, require: true },
-    part: { type: String, require: true },
-    desc: { type: String, require: true },
+    name: { type: String, require: true },
+    title: { type: String, require: true },
+    left: { type: Number, require: true },
+    top: { type: Number, require: true },
+    width: { type: Number, require: true },
+    height: { type: Number, require: true },
+    desc: { type: String, require: true }    
 }, {
         writeConcern: {
             w: 'majority',
