@@ -9,7 +9,7 @@ class Seasons extends React.Component {
         return (
             <div className="season">
                 <Nav />
-                <PopUp show={show}/>
+                <PopUp show={show} />
             </div>
         )
     }

@@ -6,16 +6,16 @@ class App extends React.Component {
     constructor() {
         super()
         this.state = {
-            showPopUp: 'hidden'
+            showPopUp: 'hidden',
+            pic: 'Boiler'
         }
-        this.click = this.click.bind()
+        this.click = this.click.bind(this)
     }
 
     click() {
         this.setState({
             showPopUp: 'visible'
         })
-        console.log("click")
     }
 
     render() {
@@ -29,4 +29,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default App
