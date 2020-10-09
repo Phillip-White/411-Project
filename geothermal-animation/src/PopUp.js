@@ -4,8 +4,7 @@ class PopUp extends React.Component {
 
     render() {
 
-        let location = 'Boiler'
-        let popUp = require('./pics/' + location + '.jpg')
+        let popUp = require('./pics/' + String(this.props.pic) + '.jpg')
 
         let style = {visibility: this.props.show}
 

@@ -3,7 +3,11 @@
     "",
     "\\geothermal-animation",
     "\\geothermal-animation\\backend",
-    "\\geothermal-animation\\src"
+    "\\geothermal-animation\\backend\\modules",
+    "\\geothermal-animation\\backend\\routes",
+    "\\geothermal-animation\\src",
+    "\\geothermal-animation\\src\\data",
+    "\\geothermal-animation\\src\\pics"
   ],
   "PreviewInSolutionExplorer": false
 }

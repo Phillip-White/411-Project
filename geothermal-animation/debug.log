@@ -936,3 +936,47 @@
 [1008/172800.914:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [1008/172800.914:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [1008/172800.914:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1012/144219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/144219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/144219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/144219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/144219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/144219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/144219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/144219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/144219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/144219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/144219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/144219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/144219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/144219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/145219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/145219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/145219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/145219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/145219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/145219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/145219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/145219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/145219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/145219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/145219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/145219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/145219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/145219.121:ERROR:crash_report_database_win.cc(498)] failed to stat report
+[1012/145219.121:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\paw12\AppData\Local\Google\Chrome\User Data\Crashpad\reports\321e98ac-a706-4ea4-87e8-04d8d721f801.dmp: The system cannot find the file specified. (0x2)
+[1012/145219.121:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\paw12\AppData\Local\Google\Chrome\User Data\Crashpad\reports\1a29c810-d9f7-4f1e-9d97-af029dbeedb7.dmp: The system cannot find the file specified. (0x2)
+[1012/145219.121:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\paw12\AppData\Local\Google\Chrome\User Data\Crashpad\reports\06a1624e-eaed-45a3-b1a6-8e30da7944b1.dmp: The system cannot find the file specified. (0x2)
+[1012/145219.121:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\paw12\AppData\Local\Google\Chrome\User Data\Crashpad\reports\5f5c484a-415b-41f8-bd92-bfddf48128a5.dmp: The system cannot find the file specified. (0x2)
+[1012/145219.121:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\paw12\AppData\Local\Google\Chrome\User Data\Crashpad\reports\610d944c-8969-4e16-a353-991f90613689.dmp: The system cannot find the file specified. (0x2)
+[1012/145219.121:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\paw12\AppData\Local\Google\Chrome\User Data\Crashpad\reports\faf4e4a8-168b-493d-9897-e241a9e389c0.dmp: The system cannot find the file specified. (0x2)
+[1012/145219.122:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\paw12\AppData\Local\Google\Chrome\User Data\Crashpad\reports\72d361e9-701b-4e09-9b62-f4c02ffb95bb.dmp: The system cannot find the file specified. (0x2)
+[1012/145219.122:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\paw12\AppData\Local\Google\Chrome\User Data\Crashpad\reports\7e302239-87e1-473f-a90e-206245841c4b.dmp: The system cannot find the file specified. (0x2)
+[1012/145219.122:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\paw12\AppData\Local\Google\Chrome\User Data\Crashpad\reports\b490e84f-a1e3-408b-a9f8-6fbc7cdeff6e.dmp: The system cannot find the file specified. (0x2)
+[1012/145219.122:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\paw12\AppData\Local\Google\Chrome\User Data\Crashpad\reports\2810fb5e-b8b0-42be-803b-1f4e662011a0.dmp: The system cannot find the file specified. (0x2)
+[1012/145219.122:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\paw12\AppData\Local\Google\Chrome\User Data\Crashpad\reports\00933d21-4a9c-43ad-8191-0c9af427a8a6.dmp: The system cannot find the file specified. (0x2)
+[1012/145219.122:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\paw12\AppData\Local\Google\Chrome\User Data\Crashpad\reports\8287951c-8df5-4854-91dc-cd35cdf3ad34.dmp: The system cannot find the file specified. (0x2)
+[1012/145219.122:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\paw12\AppData\Local\Google\Chrome\User Data\Crashpad\reports\bf34a0bd-52ed-41e3-92f1-30e5468e76f0.dmp: The system cannot find the file specified. (0x2)
+[1012/145219.122:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\paw12\AppData\Local\Google\Chrome\User Data\Crashpad\reports\27a4ec76-eb39-439e-9fb7-821719307c28.dmp: The system cannot find the file specified. (0x2)
+[1012/145219.122:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1013/103124.475:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
