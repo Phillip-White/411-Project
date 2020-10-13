@@ -3,20 +3,22 @@ import Nav from './Nav'
 import PopUp from './PopUp'
 
 class Seasons extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            show: this.props.show,
-            pic: this.props.pic
+
+    popUpRender(pass) {
+        if (this.props.show) {
+            return <PopUp pic={pass[0]} text={pass[1]} />
+
         }
     }
 
     render() {
+        const pass = [this.props.pic, this.props.text]
+        const popUpRender = this.popUpRender(pass)
 
         return (
             <div className="season">
                 <Nav />
-                <PopUp show={this.state.show} pic={this.state.pic} />
+                {popUpRender}
             </div>
         )
     }
