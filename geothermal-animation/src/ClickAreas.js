@@ -18,7 +18,7 @@ class ClickAreas extends React.Component {
 
         return (
             <div>
-                <div className="area" onClick={this.props.click(this.props.area.name)} title={this.props.area.title} id={this.props.area.id} name={this.props.area.name} style={areaStyle}>
+                <div className="area" onClick={() => this.props.click(this.props.area)} title={this.props.area.title} id={this.props.area.id} name={this.props.area.name} style={areaStyle}>
                 </div >
             </div>
         )
