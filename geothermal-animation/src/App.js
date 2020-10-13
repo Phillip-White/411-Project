@@ -3,49 +3,41 @@ import Seasons from './Seasons'
 import Map from './Map'
 
 class App extends React.Component {
-    _isMounted = false
-
     constructor() {
         super()
         this.state = {
-            showPopUp: 'hidden',
-            pics: 'Boiler'
+            //popUP info (display, picture and text)
+            showPopUp: false,
+            pic: 'Boiler',
+            text: ''
         }
         this.click = this.click.bind(this)
-        this.mapRender = this.mapRender.bind(this)
     }
 
-    componentDidMount() {
-        this._isMounted = true
-    }
-
-    click() {
+    //when a click area is clicked change the state to re-render page (popup)
+    click(picture) {
         this.setState({
             showPopUp: 'visible'
         })
-    }
-
-    mapRender() {
-        if (this._isMounted) {
-            return <Map click={this.click} />
-        }
-    }
-
-    componentWillUnmount() {
-        this._isMounted = false
+        this.setState({
+            pic: picture.name
+        })
+        this.setState({
+            //will be desc when we have all the info
+            text: picture.title
+        })
     }
 
     render() {
-        const map = this.mapRender
         const show = this.state.showPopUp
-        const pic = this.state.pics
-
+        const pic = this.state.pic
+        const text = this.state.text
         return (
             <div className="page">
-                <Seasons show={show} pic={pic} />
-                {map}
+                <Seasons show={show} pic={pic} text={text} />
+                <Map click={this.click} />
             </div>
-       )
+        )
     }
 }
 
