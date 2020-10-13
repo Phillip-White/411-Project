@@ -4,16 +4,16 @@ class PopUp extends React.Component {
 
     render() {
 
-        let location = 'Boiler'
+        let location = String(this.props.pic)
         let popUp = require('./pics/' + location + '.jpg')
-
-        let style = {visibility: this.props.show}
+        let text = String(this.props.text)
 
         return (
-            <div id="pop-up" style={style} >
+            <div id="pop-up" >
                 <img alt="part" src={popUp} id="pop-up-image" />
                 <p id="words">
                     <span id="tab"></span>
+                    {text}
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     Tempor orci dapibus ultrices in iaculis. Vulputate eu scelerisque felis imperdiet. Pellentesque diam volutpat commodo sed egestas.
                     Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Duis tristique sollicitudin nibh sit amet commodo nulla. 
