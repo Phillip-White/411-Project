@@ -2,6 +2,7 @@ import React from 'react'
 import Arrows from './Arrows'
 import ClickAreas from './ClickAreas'
 import Schematic from './pics/Geothermal Schematic.jpg'
+import ArrowList from './data/ArrowList'
 import { MapInteractionCSS } from 'react-map-interaction'
 import axios from 'axios'
 
@@ -11,10 +12,11 @@ class Map extends React.Component {
 		super(props)
 		this.state = {
 			listofarrows: [],
-			listofclick: [],
+			listofclick: []
 		}
 	}
 
+	//connect to database and get data
 	componentDidMount() {
 		axios.get('http://localhost:5000/parts/')
 			.then(response => {
@@ -36,7 +38,8 @@ class Map extends React.Component {
 
 	render() {
 
-		const arrowData = this.state.listofarrows.map(item => <Arrows key={item._id} item={item} />)
+		//map data one by one
+		const arrowData = this.state.listofarrows.map(item => <Arrows key={item.id} item={item} />)
 		const clickData = this.state.listofclick.map(area => <ClickAreas key={area._id} area={area} click={this.props.click} />)
 
 		return (
