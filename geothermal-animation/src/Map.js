@@ -16,6 +16,7 @@ class Map extends React.Component {
 		}
 	}
 
+	//connect to database and get data
 	componentDidMount() {
 		axios.get('http://localhost:5000/parts/')
 			.then(response => {
@@ -24,19 +25,20 @@ class Map extends React.Component {
 				})
 			})
 			.catch((error) => {
-			console.log(error)
+				console.log(error)
 			})
 		axios.get('http://localhost:5000/arrow/')
 			.then(response => {
 				this.setState({
 					listofarrows: response.data
-                })
-            })
+				})
+			})
 	}
 
 
 	render() {
 
+		//map data one by one
 		const arrowData = this.state.listofarrows.map(item => <Arrows key={item.id} item={item} />)
 		const clickData = this.state.listofclick.map(area => <ClickAreas key={area._id} area={area} click={this.props.click} />)
 
