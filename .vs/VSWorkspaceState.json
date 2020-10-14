@@ -3,7 +3,9 @@
     "",
     "\\geothermal-animation",
     "\\geothermal-animation\\backend",
+    "\\geothermal-animation\\public",
     "\\geothermal-animation\\src"
   ],
+  "SelectedNode": "\\geothermal-animation\\src\\ClickAreas.js",
   "PreviewInSolutionExplorer": false
 }
