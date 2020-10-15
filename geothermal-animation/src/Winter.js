@@ -1,5 +1,5 @@
 import React from 'react';
-import Seasons from './Seasons'
+import Sidebar from './Sidebar'
 import Map from './Map'
 
 class Winter extends React.Component {
@@ -34,7 +34,7 @@ class Winter extends React.Component {
         const text = this.state.text
         return (
             <div className="page">
-                <Seasons show={show} pic={pic} text={text} />
+                <Sidebar show={show} pic={pic} text={text} />
                 <Map season="Winter" click={this.click} />
             </div>
         )

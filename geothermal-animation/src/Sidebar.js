@@ -2,7 +2,7 @@ import React from 'react'
 import Nav from './Nav'
 import PopUp from './PopUp'
 
-class Seasons extends React.Component {
+class Sidebar extends React.Component {
 
     popUpRender(pass) {
         if (this.props.show) {
@@ -24,4 +24,4 @@ class Seasons extends React.Component {
     }
 }
 
-export default Seasons
+export default Sidebar
