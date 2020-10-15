@@ -35,7 +35,7 @@ class Summer extends React.Component {
         return (
             <div className="page">
                 <Seasons show={show} pic={pic} text={text} />
-                <Map season="Summer" click={this.click} />
+                <Map season={"Summer"} click={this.click} />
             </div>
         )
     }
