@@ -2,7 +2,6 @@ import React from 'react'
 import Arrows from './Arrows'
 import ClickAreas from './ClickAreas'
 import Schematic from './pics/Geothermal Schematic.jpg'
-import ArrowList from './data/ArrowList'
 import { MapInteractionCSS } from 'react-map-interaction'
 import axios from 'axios'
 

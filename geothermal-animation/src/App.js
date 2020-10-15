@@ -1,42 +1,21 @@
-import React from 'react';
-import Seasons from './Seasons'
-import Map from './Map'
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
+import Summer from './Summer'
+import Winter from './Winter'
+import Info from './Info'
 
 class App extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            //popUP info (display, picture and text)
-            showPopUp: false,
-            pic: 'Boiler',
-            text: ''
-        }
-        this.click = this.click.bind(this)
-    }
-
-    //when a click area is clicked change the state to re-render page (popup)
-    click(picture) {
-        this.setState({
-            showPopUp: 'visible'
-        })
-        this.setState({
-            pic: picture.name
-        })
-        this.setState({
-            //will be desc when we have all the info
-            text: picture.title
-        })
-    }
 
     render() {
-        const show = this.state.showPopUp
-        const pic = this.state.pic
-        const text = this.state.text
-        return (
-            <div className="page">
-                <Seasons show={show} pic={pic} text={text} />
-                <Map click={this.click} />
-            </div>
+        return(
+            <main>
+                <Switch>
+                    <Route path="/" component={Summer} exact />
+                    <Route path="/Summer" component={Summer} />
+                    <Route path="/Winter" component={Winter} />
+                    <Route path="/Info" component={Info} />
+                </Switch>
+            </main>
         )
     }
 }

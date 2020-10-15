@@ -1,5 +1,4 @@
 import React from 'react'
-import arrow from './pics/blue_flow_arrow.png'
 import { arrows } from './onload'
 
 class Arrows extends React.Component {
@@ -13,6 +12,7 @@ class Arrows extends React.Component {
         arrows()
     }
     render() {
+        let arrow =  require('./pics/' + pic + '.png')
         const arrowStyle = {
             left: this.props.item.left,
             top: this.props.item.top,

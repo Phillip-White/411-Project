@@ -2,21 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'
 import App from './App'
-
-class Animation extends React.Component {
-
-    render() {
-        return (
-            <App />
-        );
-    }
-}
-
+import { BrowserRouter } from 'react-router-dom'
 
 
 
 ReactDOM.render(
-    <Animation />,
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>,
     document.getElementById('root')
 );
 
