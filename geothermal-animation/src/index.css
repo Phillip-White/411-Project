@@ -25,7 +25,10 @@
     width:78vw;
 }
 .arrow {
-    position:absolute;
+    position: absolute;
+}
+.moreArrow {
+    position: absolute;
 }
 .area {
     background-color: blue;

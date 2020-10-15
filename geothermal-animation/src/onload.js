@@ -4,12 +4,15 @@ window.onload = function () { arrows() };
 function arrows() {
     arrowSize();
     arrowTranspose();
+    moreArrowSize();
+    moreArrowTranspose();
     transposeAreaSize();
 }
 
 var pxToVw = 100 / (document.documentElement.clientWidth);
 var pxToVh = 100 / (document.documentElement.clientHeight);
 var arrow = document.getElementsByClassName("arrow");
+var moreArrow = document.getElementsByClassName("moreArrow");
 
 
 function arrowTranspose() {
@@ -26,7 +29,7 @@ function arrowTranspose() {
         var arrowWidth = arrow[i].clientWidth;
         var arrowHeight = arrow[i].clientHeight;
 
-        x = ((x / 14400) * picWidth) - (arrowWidth/2);
+        x = ((x / 14400) * picWidth) - (arrowWidth / 2);
         y = ((y / 10800) * picHeight) - (arrowHeight / 2);
 
         arrow[i].style.left = (x * pxToVw) + 'vw';
@@ -39,6 +42,38 @@ function arrowSize() {
     var i;
     for (i = 0; i < arrow.length; i++) {
         arrow[i].style.width = (x + 'vw');
+    }
+
+
+
+
+} function moreArrowTranspose() {
+    var map = document.getElementById("map");
+
+    var picWidth = map.clientWidth;
+    var picHeight = map.clientHeight;
+
+    var i;
+    for (i = 0; i < moreArrow.length; i++) {
+        var x = moreArrow[i].style.left.match(/\d+/g);
+        var y = moreArrow[i].style.top.match(/\d+/g);
+
+        var moreArrowWidth = moreArrow[i].clientWidth;
+        var moreArrowHeight = moreArrow[i].clientHeight;
+
+        x = ((x / 14400) * picWidth) - (moreArrowWidth / 2);
+        y = ((y / 10800) * picHeight) - (moreArrowHeight / 2);
+
+        moreArrow[i].style.left = (x * pxToVw) + 'vw';
+        moreArrow[i].style.top = (y * pxToVh) + 'vh';
+    }
+}
+
+function moreArrowSize() {
+    var x = 9 * pxToVw;
+    var i;
+    for (i = 0; i < moreArrow.length; i++) {
+        moreArrow[i].style.width = (x + 'vw');
     }
 }
 

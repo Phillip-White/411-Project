@@ -58,7 +58,7 @@ const ArrowList = [
     { id: "57", left: 9218, top: 7804, rotate: 70 },
     { id: "58", left: 8530, top: 8200, rotate: 70 },
     { id: "59", left: 7969, top: 8200, rotate: 70 },
-    { id: "60", left: 7128, top: 7722, rotate: 70 },
+    { id: "60", left: 7128, top: 7722, rotate: 70 }
     
 ]
 
