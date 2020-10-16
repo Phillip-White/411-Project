@@ -1,5 +1,5 @@
 const MoreArrowsList = [
-    { id: "1", left: 7872, top: 720, rotate: 70 },
+    { id: "1", left: 7872, top: 720, rotate: 120 },
     { id: "2", left: 7970, top: 1150, rotate: 70 },
     { id: "3", left: 7970, top: 2050, rotate: 70 },
     { id: "4", left: 7970, top: 2950, rotate: 70 },

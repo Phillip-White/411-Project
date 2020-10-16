@@ -1,8 +1,8 @@
 const ArrowList = [
-    { id: "1", left: 7968, top: 882, rotate: 70 },
-    { id: "2", left: 7980, top: 1069, rotate: 70 },
-    { id: "3", left: 7420, top: 1392, rotate: 70 },
-    { id: "4", left: 6748, top: 1780, rotate: 70 },
+    { id: "1", left: 7968, top: 882, rotate: 120 },
+    { id: "2", left: 7980, top: 1069, rotate: 240 },
+    { id: "3", left: 7420, top: 1392, rotate: 240 },
+    { id: "4", left: 6748, top: 1780, rotate: 240 },
     { id: "5", left: 6547, top: 2250, rotate: 70 },
     { id: "6", left: 6547, top: 3150, rotate: 70 },
     { id: "7", left: 6547, top: 4050, rotate: 70 },
