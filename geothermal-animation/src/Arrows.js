@@ -9,6 +9,10 @@ class Arrows extends React.Component {
         }
     }
 
+    componentDidMount() {
+        arrows()
+    }
+
     render() {
         let pic = 'blue_flow_arrow'
         if(this.props.season==="Summer"){
