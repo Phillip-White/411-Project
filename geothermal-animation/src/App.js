@@ -8,7 +8,7 @@ class App extends React.Component {
         this.state = {
             //popUP info (display, picture and text)
             showPopUp: false,
-            pic: 'Boiler',
+            pic: '',
             text: ''
         }
         this.click = this.click.bind(this)
@@ -17,7 +17,7 @@ class App extends React.Component {
     //when a click area is clicked change the state to re-render page (popup)
     click(picture) {
         this.setState({
-            showPopUp: 'visible'
+            showPopUp: true
         })
         this.setState({
             pic: picture.name
