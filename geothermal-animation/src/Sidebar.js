@@ -4,21 +4,11 @@ import PopUp from './PopUp'
 
 class Sidebar extends React.Component {
 
-    popUpRender(pass) {
-        if (this.props.show) {
-            return <PopUp pic={pass[0]} text={pass[1]} />
-
-        }
-    }
-
     render() {
-        const pass = [this.props.pic, this.props.text]
-        const popUpRender = this.popUpRender(pass)
-
         return (
             <div className="season">
                 <Nav />
-                {popUpRender}
+                <PopUp pic={this.props.pic} text={this.props.text} show={this.props.show} season={this.props.season} /> 
             </div>
         )
     }

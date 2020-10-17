@@ -8,7 +8,7 @@ class Winter extends React.Component {
         this.state = {
             //popUP info (display, picture and text)
             showPopUp: false,
-            pic: 'Boiler',
+            pic: '',
             text: ''
         }
         this.click = this.click.bind(this)
@@ -34,7 +34,7 @@ class Winter extends React.Component {
         const text = this.state.text
         return (
             <div className="page">
-                <Sidebar show={show} pic={pic} text={text} />
+                <Sidebar show={show} pic={pic} text={text} season={"Winter"} />
                 <Map season="Winter" click={this.click} />
             </div>
         )
