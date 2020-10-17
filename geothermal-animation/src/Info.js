@@ -1,5 +1,5 @@
 import React from 'react'
-import Seasons from './Seasons'
+import Sidebar from './Sidebar'
 
 class Info extends React.Component {
     constructor() {
@@ -33,7 +33,7 @@ class Info extends React.Component {
         const text = this.state.text
         return (
             <div>
-                <Seasons show={show} pic={pic} text={text} />
+                <Sidebar show={show} pic={pic} text={text} />
                 <h1>Info Page</h1>
             </div>
             )

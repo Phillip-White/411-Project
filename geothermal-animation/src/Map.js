@@ -40,9 +40,8 @@ class Map extends React.Component {
 
 
 	render() {
-
 		//map data one by one
-		const arrowData = this.state.listofarrows.map(item => <Arrows key={item.id} item={item} />)
+		const arrowData = this.state.listofarrows.map(item => <Arrows  key={item.id} item={item} season={this.props.season} />)
 		const clickData = this.state.listofclick.map(area => <ClickAreas key={area._id} area={area} click={this.props.click} />)
 
 		return (
@@ -55,6 +54,7 @@ class Map extends React.Component {
 					<div id="click-container">
 						{clickData}
 					</div>
+					{console.log(this.props.season)}
 				</MapInteractionCSS>
 			</div>
 		)
