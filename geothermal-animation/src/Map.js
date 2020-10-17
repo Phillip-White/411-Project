@@ -15,6 +15,10 @@ class Map extends React.Component {
 		}
 	}
 
+	componentDidMount() {
+		arrows()
+	}
+
 	//connect to database and get data
 	componentDidMount() {
 		axios.get('http://localhost:5000/parts/')

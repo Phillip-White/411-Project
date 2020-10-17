@@ -16,7 +16,7 @@ class Info extends React.Component {
     //when a click area is clicked change the state to re-render page (popup)
     click(picture) {
         this.setState({
-            showPopUp: 'visible'
+            showPopUp: true
         })
         this.setState({
             pic: picture.name

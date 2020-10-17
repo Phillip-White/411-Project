@@ -8,9 +8,7 @@ class Arrows extends React.Component {
             top:this.props.item.top
         }
     }
-    componentDidMount() {
-        arrows()
-    }
+
     render() {
         let arrow =  require('./pics/' + pic + '.png')
         const arrowStyle = {
