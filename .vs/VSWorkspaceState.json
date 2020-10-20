@@ -2,9 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\geothermal-animation",
+    "\\geothermal-animation\\backend",
+    "\\geothermal-animation\\backend\\modules",
+    "\\geothermal-animation\\backend\\routes",
     "\\geothermal-animation\\src",
+    "\\geothermal-animation\\src\\data",
     "\\geothermal-animation\\src\\pics"
   ],
-  "SelectedNode": "\\geothermal-animation\\src\\data",
+  "SelectedNode": "\\geothermal-animation\\backend",
   "PreviewInSolutionExplorer": false
 }
