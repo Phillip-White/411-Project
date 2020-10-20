@@ -12,13 +12,14 @@ class Seasons extends React.Component {
     }
 
     render() {
-        const pass = [this.props.pic, this.props.text]
-        const popUpRender = this.popUpRender(pass)
+        const pic = this.props.pic
+        const text = this.props.text
+        const show = this.props.show
 
         return (
             <div className="season">
                 <Nav />
-                {popUpRender}
+                <PopUp pic={pic} text={text} show={show} />
             </div>
         )
     }
