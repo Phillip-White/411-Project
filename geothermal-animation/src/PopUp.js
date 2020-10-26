@@ -5,17 +5,21 @@ class PopUp extends React.Component {
     render() {
         let location = ''
         let text = ''
-        if (!this.props.show) {
-            location = 'Boiler'
-            text = "Replace this text for default"
-        }
-        else {
+        if (this.props.show) {
             location = String(this.props.pic)
             text = String(this.props.text)
         }
-
+        else {
+            if (this.props.season === "Summer") {
+                location = 'Boiler'
+                text = "Replace with summer text"
+            }
+            else {
+                location = 'CoolingTower'
+                text = "Replace with winter text"
+            }
+        }
         let popUp = require('./pics/' + location + '.jpg')
-
 
         return (
             <div id="pop-up" >
