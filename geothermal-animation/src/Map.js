@@ -32,7 +32,6 @@ class Map extends React.Component {
 				<MapInteractionCSS>
 					<img alt="Schematic" src={Schematic} id="map" />
 					<div id="arrow-container">
-						{moreArrowData}
 						{arrowData}
 						
 					</div>
