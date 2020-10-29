@@ -3,8 +3,9 @@
     "",
     "\\backend",
     "\\public",
-    "\\src"
+    "\\src",
+    "\\src\\data"
   ],
-  "SelectedNode": "\\backend\\package-lock.json",
+  "SelectedNode": "\\src\\data\\MoreArrowList.js",
   "PreviewInSolutionExplorer": false
 }
