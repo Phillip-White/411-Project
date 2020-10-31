@@ -3,13 +3,10 @@
     "",
     "\\geothermal-animation",
     "\\geothermal-animation\\backend",
-    "\\geothermal-animation\\backend\\modules",
-    "\\geothermal-animation\\backend\\routes",
-    "\\geothermal-animation\\public",
     "\\geothermal-animation\\src",
     "\\geothermal-animation\\src\\data",
     "\\geothermal-animation\\src\\pics"
   ],
-  "SelectedNode": "\\geothermal-animation\\src\\data\\ClickAreaList.js",
+  "SelectedNode": "\\geothermal-animation\\src\\data\\AnimationOrder.js",
   "PreviewInSolutionExplorer": false
 }
