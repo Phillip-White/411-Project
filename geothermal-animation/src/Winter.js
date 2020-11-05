@@ -24,7 +24,7 @@ class Winter extends React.Component {
         })
         this.setState({
             //will be desc when we have all the info
-            text: picture.title
+            text: picture.desc
         })
     }
 
