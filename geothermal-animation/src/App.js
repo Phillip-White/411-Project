@@ -4,6 +4,7 @@ import Summer from './Summer'
 import Winter from './Winter'
 import Info from './Info'
 
+
 class App extends React.Component {
 
     render() {
@@ -15,6 +16,7 @@ class App extends React.Component {
                     <Route path="/Winter" component={Winter} />
                     <Route path="/Info" component={Info} />
                 </Switch>
+                
             </main>
         )
     }

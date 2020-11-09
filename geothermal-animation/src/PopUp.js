@@ -14,6 +14,10 @@ class PopUp extends React.Component {
                 location = 'Boiler'
                 text = "Replace with summer text"
             }
+            else if(this.props.season ==="Info"){
+                location = "whitespace"
+                text = ""
+            }
             else {
                 location = 'CoolingTower'
                 text = "Replace with winter text"
