@@ -16,6 +16,10 @@ class PopUp extends React.Component {
                 "The experience of cold air blowing into the building is the result of the process of removing heat from the circulated air (the red arrows moving down), transfering the heat"
                 "to the ground, and returning cool air back to the building (the blue arrows moving up)."
             }
+            else if(this.props.season ==="Info"){
+                location = "whitespace"
+                text = ""
+            }
             else {
                 location = 'CoolingTower'
                 text = "During the winter, as air is circulated through the building, the heat pump absorbs heat from the ground, concentrates it, and then transfers it to the circulated"
