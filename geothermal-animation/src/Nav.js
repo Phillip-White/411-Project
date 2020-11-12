@@ -6,9 +6,9 @@ class Nav extends React.Component {
         return (
             <div>
                 <div>
+                    <h3><Link to="/info">Home</Link></h3>
                     <h3><Link to="/summer">Summer</Link></h3>
                     <h3><Link to="/winter">Winter</Link></h3>
-                    <h3><Link to="/info">Info</Link></h3>
                 </div>
             </div>
         )
