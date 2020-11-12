@@ -16,7 +16,7 @@ export class BootstrapCarousel extends Component {
                          className="d-block w-100"  
                         src={'assets/img/i2.jpg'}  />  
                            <Carousel.Caption>  
-                             <h3>First Demo </h3>  
+                             <h3>First Demo</h3>  
                                  </Carousel.Caption>  
                                  </Carousel.Item  >  
                                  <Carousel.Item style={{'height':"300px"}}>  
@@ -24,7 +24,7 @@ export class BootstrapCarousel extends Component {
                                    className="d-block w-100"  
                                     src={'assets/img/i1.jpg'}    />  
                                        <Carousel.Caption>  
-                                   <h3>Second Demo</h3>  
+                                   <h3>Heat Pump</h3>  
                                       </Carousel.Caption>  
                                          </Carousel.Item>  
                                        <Carousel.Item style={{'height':"300px"}}>  
@@ -32,7 +32,7 @@ export class BootstrapCarousel extends Component {
                                         className="d-block w-100"  
                                          src={'assets/img/i3.jpg'}   />  
                                         <Carousel.Caption>  
-                                          <h3>Third Demo</h3>  
+                                          <h3>Cooling Tower</h3>  
                                           </Carousel.Caption>  
                                          </Carousel.Item>  
                                         </Carousel>  

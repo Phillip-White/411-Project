@@ -2,11 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\geothermal-animation",
-    "\\geothermal-animation\\backend",
-    "\\geothermal-animation\\src",
-    "\\geothermal-animation\\src\\data",
-    "\\geothermal-animation\\src\\pics"
+    "\\geothermal-animation\\public\\assets\\img",
+    "\\geothermal-animation\\src"
   ],
-  "SelectedNode": "\\geothermal-animation\\src\\data\\AnimationOrder.js",
+  "SelectedNode": "\\geothermal-animation\\package.json",
   "PreviewInSolutionExplorer": false
 }
