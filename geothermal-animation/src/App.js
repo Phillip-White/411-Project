@@ -10,7 +10,7 @@ class App extends React.Component {
         return(
             <main>
                 <Switch>
-                    <Route path="/" component={Summer} exact />
+                    <Route path="/" component={Info} exact />
                     <Route path="/Summer" component={Summer} />
                     <Route path="/Winter" component={Winter} />
                     <Route path="/Info" component={Info} />
