@@ -2,8 +2,8 @@ import React from 'react'
 import Sidebar from './Sidebar'
 import Schematic from './pics/Geothermal Schematic.jpg'
 //import Slider from './Slider'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import BootstrapCarousel from './BootstrapCarousel' 
+//import 'bootstrap/dist/css/bootstrap.min.css';
+//import BootstrapCarousel from './BootstrapCarousel' 
 
 class Info extends React.Component {
     constructor() {
@@ -40,7 +40,7 @@ class Info extends React.Component {
                 <Sidebar show={show} pic={pic} text={text}  season={"Info"}/>
                 <div style={{overflow:'auto'}}>
                     
-                    <BootstrapCarousel></BootstrapCarousel>  
+                     
                     <h1>What is Geothermal Energy?</h1>
                     
                     Geothermal energy is the heat from the Earth. The word geothermal comes from the Greek words geo (earth) and therme (heat). Geothermal energy is a renewable energy source because heat is continuously produced inside the earth. People use geothermal heat to heat buildings and generate electricity. Geothermal heat pumps use the earth as a heat source in the winter and as a heat storage source in the summer. This allows the system to provide extremely efficient heating or cooling all year long in virtually any climate.

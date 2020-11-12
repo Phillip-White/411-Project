@@ -50,10 +50,10 @@ class Arrows extends React.Component {
 
     componentDidMount() {
         arrows()
-     //   this.animate = setInterval(this.blink, 1000)
+        this.animate = setInterval(this.blink, 1000)
     }
     componentWillUnmount() {
-      //  clearInterval(this.animate)
+        clearInterval(this.animate)
     }
 
     render() {
@@ -76,7 +76,7 @@ class Arrows extends React.Component {
             left: this.props.item.left,
             top: this.props.item.top,
             transform: 'rotate(' + this.props.item.rotate + 'deg)',
-        //    display: 'none'
+            display: 'none'
         }
         return (
             <img alt="arrow" src={arrow} id={this.props.item._id} className="arrow" style={arrowStyle}></img>
