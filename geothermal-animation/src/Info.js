@@ -1,9 +1,8 @@
 import React from 'react'
 import Sidebar from './Sidebar'
 import Schematic from './pics/Geothermal Schematic.jpg'
-//import Slider from './Slider'
-//import 'bootstrap/dist/css/bootstrap.min.css';
-//import BootstrapCarousel from './BootstrapCarousel' 
+import BootstrapCarousel from './BootstrapCarousel'
+
 
 class Info extends React.Component {
     constructor() {
@@ -39,7 +38,7 @@ class Info extends React.Component {
             <div className="page">
                 <Sidebar show={show} pic={pic} text={text}  season={"Info"}/>
                 <div style={{overflow:'auto'}}>
-                    
+                    <BootstrapCarousel></BootstrapCarousel>
                      
                     <h1>What is Geothermal Energy?</h1>
                     
