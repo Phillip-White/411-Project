@@ -49,7 +49,7 @@ class Arrows extends React.Component {
     }
 
     componentDidMount() {
-        arrowTranspose(this.props.item.left, this.props.item.top, this.props.item._id)
+        arrowTranspose(this.props.item._id)
         this.animate = setInterval(this.blink, 1000)
     }
     componentWillUnmount() {
@@ -73,6 +73,8 @@ class Arrows extends React.Component {
 
         let arrow =  require('./pics/' + pic + '.png')
         const arrowStyle = {
+            top: this.props.item.top,
+            left: this.props.item.left,
             transform: 'rotate(' + this.props.item.rotate + 'deg)',
             visibility: 'hidden'
         }

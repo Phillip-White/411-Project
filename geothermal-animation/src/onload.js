@@ -1,12 +1,15 @@
 var pxToVw = 100 / (document.documentElement.clientWidth);
 var pxToVh = 100 / (document.documentElement.clientHeight);
 
-export function arrowTranspose(x, y, id) {
-    var picWidth = document.getElementById("map").width;
-    var picHeight = document.getElementById("map").height;
+export function arrowTranspose(id) {
+    var picWidth = document.getElementById("map").clientWidth;
+    var picHeight = document.getElementById("map").clientHeight;
 
     var arrowWidth = document.getElementById(id).width;
     var arrowHeight = document.getElementById(id).height;
+
+    var x = document.getElementById(id).style.left.match(/\d+/g);
+    var y = document.getElementById(id).style.top.match(/\d+/g);
 
     x = ((x / 14400) * picWidth) - (arrowWidth / 2);
     y = ((y / 10800) * picHeight) - (arrowHeight / 2);

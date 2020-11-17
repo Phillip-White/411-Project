@@ -11,7 +11,8 @@ class Map extends React.Component {
 		super(props)
 		this.state = {
 			listofarrows: [],
-			listofclick: []
+			listofclick: [],
+			loaded: false
 		}
 	}
 
@@ -42,11 +43,13 @@ class Map extends React.Component {
 		//map data one by one	
 		const arrowData = this.state.listofarrows.map(item => <Arrows key={item._id} item={item} season={this.props.season} />)
 		const clickData = this.state.listofclick.map(area => <ClickAreas key={area._id} area={area} click={this.props.click} />)
+		let temp = require('./pics/warm_temp.png' )
 
 		return (
 			<div className="wrapper" id="map-container">
 				<MapInteractionCSS>
 					<img alt="Schematic" src={Schematic} id="map" />
+					<img alt="Thermostat" src={temp} id="temp" />
 					<div id="arrow-container">
 						{arrowData}
 					</div>
