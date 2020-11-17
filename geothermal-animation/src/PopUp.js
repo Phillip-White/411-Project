@@ -12,11 +12,19 @@ class PopUp extends React.Component {
         else {
             if (this.props.season === "Summer") {
                 location = 'Boiler'
-                text = "Replace with summer text"
+                text = "During the summer, as air is circulated through the building, the heat pump removes heat from the air and transfers it to the fluid that circulates to the ground."
+                +" The experience of cold air blowing into the building is the result of the process of removing heat from the circulated air (the red arrows moving down), transfering the heat "
+                +"to the ground, and returning cool air back to the building (the blue arrows moving up)."
+            }
+            else if(this.props.season ==="Info"){
+                location = "whitespace"
+                text = ""
             }
             else {
                 location = 'CoolingTower'
-                text = "Replace with winter text"
+                text = "During the winter, as air is circulated through the building, the heat pump absorbs heat from the ground, concentrates it, and then transfers it to the circulated"
+                +"air. The experience of heated air blowing into the building is the result the process of absorbing heat from the ground and transfering it to the circulated air (the red"
+                +"arrows moving up)"
             }
         }
         let popUp = require('./pics/' + location + '.jpg')
