@@ -1,41 +1,18 @@
-export function arrows() {
-    arrowSize();
-    arrowTranspose();
-}
-
 var pxToVw = 100 / (document.documentElement.clientWidth);
 var pxToVh = 100 / (document.documentElement.clientHeight);
-var arrow = document.getElementsByClassName("arrow");
 
+export function arrowTranspose(x, y, id) {
+    var picWidth = document.getElementById("map").width;
+    var picHeight = document.getElementById("map").height;
 
-export function arrowTranspose() {
-    var map = document.getElementById("map");
+    var arrowWidth = document.getElementById(id).width;
+    var arrowHeight = document.getElementById(id).height;
 
-    var picWidth = map.clientWidth;
-    var picHeight = map.clientHeight;
+    x = ((x / 14400) * picWidth) - (arrowWidth / 2);
+    y = ((y / 10800) * picHeight) - (arrowHeight / 2);
 
-    var i;
-    for (i = 0; i < arrow.length; i++) {
-        var x = arrow[i].style.left.match(/\d+/g);
-        var y = arrow[i].style.top.match(/\d+/g);
-
-        var arrowWidth = arrow[i].clientWidth;
-        var arrowHeight = arrow[i].clientHeight;
-
-        x = ((x / 14400) * picWidth) - (arrowWidth/2);
-        y = ((y / 10800) * picHeight) - (arrowHeight / 2);
-
-        arrow[i].style.left = (x * pxToVw) + 'vw';
-        arrow[i].style.top = (y * pxToVh) + 'vh';
-    }
-}
-
-export function arrowSize() {
-    var x = 15 * pxToVw;
-    var i;
-    for (i = 0; i < arrow.length; i++) {
-        arrow[i].style.width = (x + 'vw');
-    }
+    document.getElementById(id).style.left = x + "px";
+    document.getElementById(id).style.top = y + "px";
 }
 
 export function transposeAreaSize() {

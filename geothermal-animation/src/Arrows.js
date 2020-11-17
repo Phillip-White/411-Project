@@ -1,5 +1,5 @@
 import React from 'react'
-import { arrows } from './onload'
+import { arrowTranspose } from './onload'
 import animationOrder from './data/AnimationOrder'
 
 class Arrows extends React.Component {
@@ -8,14 +8,14 @@ class Arrows extends React.Component {
         this.state = {
             prev: '',
             curr: '',
-            step:0
+            step: 0
         }
         this.blink = this.blink.bind(this)
     }
 
     blink() {
         this.setState({
-            curr: animationOrder[this.state.step]
+            curr: animationOrder[this.state.step],
         })
         
 
@@ -24,12 +24,12 @@ class Arrows extends React.Component {
         let i
         if (off !== null) {
             for (i = 0; i < off.length; i++) {
-                document.getElementById(off[i]).style.display = 'none'
+                document.getElementById(off[i]).style.visibility = 'hidden'
             }
         }
 
         for (i = 0; i < on.length; i++) {
-            document.getElementById(on[i]).style.display = 'block'
+            document.getElementById(on[i]).style.visibility = 'visible'
         }
 
         this.setState({
@@ -49,7 +49,7 @@ class Arrows extends React.Component {
     }
 
     componentDidMount() {
-        arrows()
+        arrowTranspose(this.props.item.left, this.props.item.top, this.props.item._id)
         this.animate = setInterval(this.blink, 1000)
     }
     componentWillUnmount() {
@@ -59,24 +59,22 @@ class Arrows extends React.Component {
     render() {
         let pic 
         if (this.props.season === "Summer" && this.props.item._id.startsWith("o")) {
-            pic = 'blue_flow_arrow'
+            pic = 'red_flow_arrow'
         }
         else if (this.props.season === "Summer" && this.props.item._id.startsWith("i")) {
-            pic = 'blue_flow_arrow2'
+            pic = 'blue_flow_arrow'
         }
         else if (this.props.season === "Winter" && this.props.item._id.startsWith("o")) {
-            pic = 'blue_flow_arrow2'
+            pic = 'blue_flow_arrow'
         }
         else {
-            pic = 'blue_flow_arrow'
+            pic = 'red_flow_arrow'
         }
 
         let arrow =  require('./pics/' + pic + '.png')
         const arrowStyle = {
-            left: this.props.item.left,
-            top: this.props.item.top,
             transform: 'rotate(' + this.props.item.rotate + 'deg)',
-            display: 'none'
+            visibility: 'hidden'
         }
         return (
             <img alt="arrow" src={arrow} id={this.props.item._id} className="arrow" style={arrowStyle}></img>
