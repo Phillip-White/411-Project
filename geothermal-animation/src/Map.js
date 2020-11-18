@@ -4,6 +4,8 @@ import ClickAreas from './ClickAreas'
 import Schematic from './pics/Geothermal Schematic.jpg'
 import { MapInteractionCSS } from 'react-map-interaction'
 import axios from 'axios'
+import Snowfall from 'react-snowfall'
+
 
 class Map extends React.Component {
 
@@ -14,6 +16,7 @@ class Map extends React.Component {
 			listofclick: [],
 		}
 	}
+
 
 
 	//connect to database and get data
@@ -35,17 +38,36 @@ class Map extends React.Component {
 			})
 		
 	}
-
-
-
+	
 
 	render() {
 		//map data one by one	
 		const arrowData = this.state.listofarrows.map(item => <Arrows key={item.id} item={item} season={this.props.season} />)
 		const clickData = this.state.listofclick.map(area => <ClickAreas key={area._id} area={area} click={this.props.click} />)
 
+		let snow = null
+		if (this.props.season === 'Winter') {
+			snow = <Snowfall color="#cee9ee"/>
+		}
+
+		const sunStyle = {
+			top: 0,
+			right:0,
+			transform: 'translate(50%,-50%)',
+
+        }
+
+		let sun = null
+		if (this.props.season === 'Summer') {
+			let sunpic = require('./pics/sun.png')
+			sun = <img src={sunpic} alt="Sun" id="sun"
+				style={sunStyle}/>
+		}
+
+
 		return (
 			<div className="wrapper" id="map-container">
+				
 				<MapInteractionCSS>
 					<img alt="Schematic" src={Schematic} id="map" />
 					<div id="arrow-container">
@@ -54,10 +76,16 @@ class Map extends React.Component {
 					<div id="click-container">
 						{clickData}
 					</div>
+					{snow}
 				</MapInteractionCSS>
+				{sun}
 			</div>
 		)
 	}
 }
+
+
+
+
 
 export default Map

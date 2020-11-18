@@ -11,10 +11,13 @@
     width: 20vw;
 
 }
+#sun{
+    position:absolute;
+}
 .wrapper {
     overflow: auto;
-    position:relative;
-    top:0px;
+    position: relative;
+    top: 0px;
     left: 0px;
 }
 #map-container {

@@ -13,7 +13,7 @@ class Summer extends React.Component {
         }
         this.click = this.click.bind(this)
     }
-
+    
     //when a click area is clicked change the state to re-render page (popup)
     click(picture) {
         this.setState({
@@ -32,9 +32,12 @@ class Summer extends React.Component {
         const show = this.state.showPopUp
         const pic = this.state.pic
         const text = this.state.text
+       
         return (
             <div className="page">
+                
                 <Sidebar show={show} pic={pic} text={text} season={"Summer"} />
+                
                 <Map season={"Summer"} click={this.click} />
             </div>
         )
