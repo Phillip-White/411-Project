@@ -25,6 +25,12 @@ body{
     width:100%;
 }
 
+#temp{
+    width: 30px;
+    position: absolute;
+
+}
+
 .arrow {
     width:20px;
     position:absolute;

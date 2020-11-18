@@ -50,7 +50,7 @@ class Arrows extends React.Component {
 
     componentDidMount() {
         arrowTranspose(this.props.item._id)
-        this.animate = setInterval(this.blink, 1000)
+        this.animate = setInterval(this.blink, 500)
     }
     componentWillUnmount() {
         clearInterval(this.animate)

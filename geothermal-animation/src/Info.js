@@ -1,6 +1,5 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-import Schematic from './pics/Geothermal Schematic.jpg'
 import BootstrapCarousel from './BootstrapCarousel'
 import 'bootstrap/dist/css/bootstrap.min.css';
 

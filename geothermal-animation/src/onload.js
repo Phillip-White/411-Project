@@ -1,9 +1,6 @@
-var pxToVw = 100 / (document.documentElement.clientWidth);
-var pxToVh = 100 / (document.documentElement.clientHeight);
-
 export function arrowTranspose(id) {
-    var picWidth = document.getElementById("map").clientWidth;
-    var picHeight = document.getElementById("map").clientHeight;
+    var picWidth = window.innerWidth * .8;
+    var picHeight = (picWidth/14400) * 10800;
 
     var arrowWidth = document.getElementById(id).width;
     var arrowHeight = document.getElementById(id).height;
@@ -19,9 +16,8 @@ export function arrowTranspose(id) {
 }
 
 export function transposeAreaSize() {
-    var map = document.getElementById("map");
-    var picWidth = map.clientWidth;
-    var picHeight = map.clientHeight;
+    var picWidth = window.innerWidth * .8;
+    var picHeight = (picWidth / 14400) * 10800;
 
     var area = document.getElementsByClassName("area");
 
@@ -37,10 +33,10 @@ export function transposeAreaSize() {
         x2 = (x2 / 14400) * picWidth;
         y2 = (y2 / 10800) * picHeight; 
 
-        area[i].style.left = (x1 * pxToVw) + 'vw';
-        area[i].style.top = (y1 * pxToVh) + 'vh';
-        area[i].style.width = (x2 * pxToVw) + 'vw';
-        area[i].style.height = (y2 * pxToVh) + 'vh';
+        area[i].style.left = x1 + 'px';
+        area[i].style.top = y1 + 'px';
+        area[i].style.width = x2 + 'px';
+        area[i].style.height = y2 + 'px';
         
     }
 }

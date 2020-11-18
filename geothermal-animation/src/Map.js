@@ -4,6 +4,7 @@ import ClickAreas from './ClickAreas'
 import Schematic from './pics/Geothermal Schematic.jpg'
 import { MapInteractionCSS } from 'react-map-interaction'
 import axios from 'axios'
+import { arrowTranspose } from './onload'
 
 class Map extends React.Component {
 
@@ -12,13 +13,20 @@ class Map extends React.Component {
 		this.state = {
 			listofarrows: [],
 			listofclick: [],
-			loaded: false
+			tempLeft: 5320,
+			tempTop: 3790,
+			trans: {
+				xMin: -(window.innerWidth * .6),
+				xMax: window.innerWidth * .6,
+				yMin: -(window.innerHeight),
+				yMax: window.innerHeight * .8
+			}
 		}
 	}
 
 	//connect to database and get data
 	componentDidMount() {
-		axios.get('http://localhost:5000/parts/')
+		axios.get('http://' + window.location.hostname + ':5000/parts/')
 			.then(response => {
 				this.setState({
 					listofclick: response.data
@@ -27,12 +35,13 @@ class Map extends React.Component {
 			.catch((error) => {
 				console.log(error)
 			})
-		axios.get('http://localhost:5000/arrow/')
+		axios.get('http://' + window.location.hostname + ':5000/arrow/')
 			.then(response => {
 				this.setState({
 					listofarrows: response.data
 				})
 			})
+		arrowTranspose("temp")
 	}
 
 
@@ -41,15 +50,20 @@ class Map extends React.Component {
 
 	render() {
 		//map data one by one	
+
 		const arrowData = this.state.listofarrows.map(item => <Arrows key={item._id} item={item} season={this.props.season} />)
 		const clickData = this.state.listofclick.map(area => <ClickAreas key={area._id} area={area} click={this.props.click} />)
-		let temp = require('./pics/warm_temp.png' )
+		let temp = require('./pics/warm_temp.png')
+		const tempStyle = {
+			top: this.state.tempTop,
+			left: this.state.tempLeft
+        }
 
 		return (
 			<div className="wrapper" id="map-container">
-				<MapInteractionCSS>
+				<MapInteractionCSS minScale={.5} translationBounds={this.state.trans}  >
 					<img alt="Schematic" src={Schematic} id="map" />
-					<img alt="Thermostat" src={temp} id="temp" />
+					<img alt="Thermostat" style={tempStyle} src={temp} id="temp" />
 					<div id="arrow-container">
 						{arrowData}
 					</div>
