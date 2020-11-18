@@ -1,8 +1,6 @@
 import React from 'react';
 import Sidebar from './Sidebar'
 import Map from './Map'
-import Snowfall from 'react-snowfall'
-import ReactDOM from 'react-dom'
 
 class Winter extends React.Component {
     constructor() {

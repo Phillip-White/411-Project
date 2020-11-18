@@ -31,6 +31,10 @@ body{
 
 }
 
+#sun{
+    position: absolute;
+}
+
 .arrow {
     width:20px;
     position:absolute;
