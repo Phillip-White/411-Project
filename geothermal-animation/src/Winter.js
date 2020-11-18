@@ -1,6 +1,8 @@
 import React from 'react';
 import Sidebar from './Sidebar'
 import Map from './Map'
+import Snowfall from 'react-snowfall'
+import ReactDOM from 'react-dom'
 
 class Winter extends React.Component {
     constructor() {
@@ -14,6 +16,7 @@ class Winter extends React.Component {
         this.click = this.click.bind(this)
     }
 
+  
     //when a click area is clicked change the state to re-render page (popup)
     click(picture) {
         this.setState({
@@ -34,11 +37,23 @@ class Winter extends React.Component {
         const text = this.state.text
         return (
             <div className="page">
-                <Sidebar show={show} pic={pic} text={text} season={"Winter"} />
-                <Map season="Winter" click={this.click} />
+
+               
+
+                
+                <Sidebar show={show} pic={pic} text={text} season={"Winter"} >
+
+                </Sidebar>
+                
+               
+                
+                    <Map season="Winter" click={this.click} />
+                    
             </div>
         )
     }
 }
+
+
 
 export default Winter

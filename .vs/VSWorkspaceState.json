@@ -2,10 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\geothermal-animation",
-    "\\geothermal-animation\\public",
+    "\\geothermal-animation\\backend",
     "\\geothermal-animation\\src",
-    "\\geothermal-animation\\src\\data"
+    "\\geothermal-animation\\src\\data",
+    "\\geothermal-animation\\src\\pics"
   ],
-  "SelectedNode": "\\geothermal-animation\\src\\Info.js",
   "PreviewInSolutionExplorer": false
 }
