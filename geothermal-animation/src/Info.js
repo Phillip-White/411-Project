@@ -1,9 +1,8 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-import Schematic from './pics/Geothermal Schematic.jpg'
-//import Slider from './Slider'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BootstrapCarousel from './BootstrapCarousel' 
+import Footer from './Footer'
 
 class Info extends React.Component {
     constructor() {
@@ -39,9 +38,10 @@ class Info extends React.Component {
             <div className="page">
                 <Sidebar show={show} pic={pic} text={text}  season={"Info"}/>
                 <div style={{overflow:'auto'}}>
-                    
-                    <BootstrapCarousel></BootstrapCarousel>  
-                    <h1>What is Geothermal Energy?</h1>
+                <div className="content-wrap">
+                        <BootstrapCarousel/>
+                </div>
+                    <div className="page-container"><h1>What is Geothermal Energy?</h1>
                     
                     Geothermal energy is the heat from the Earth. The word geothermal comes from the Greek words geo (earth) and therme (heat). Geothermal energy is a renewable energy source because heat is continuously produced inside the earth. People use geothermal heat to heat buildings and generate electricity. Geothermal heat pumps use the earth as a heat source in the winter and as a heat storage source in the summer. This allows the system to provide extremely efficient heating or cooling all year long in virtually any climate.
                     Southeastern Louisiana University currently has two geothermal systems: a hybrid system and a pond system.
@@ -58,8 +58,13 @@ class Info extends React.Component {
                     <br></br><br/>
                     <h1>Explore Hybrid System </h1>
                     <br/>
-                    Summer: Heat is absorbed from the building and dissipated into the ground. The temperature in the ground is lower, 60°F, than underneath the ground, 85°F or more. Therefore, heat is collected throughout the water wells and dissipated into the ground. Water returns to the dorms with a lower temperature.                    </div>
+                    Summer: Heat is absorbed from the building and dissipated into the ground. The temperature in the ground is lower, 60°F, than underneath the ground, 85°F or more. Therefore, heat is collected throughout the water wells and dissipated into the ground. Water returns to the dorms with a lower temperature.                    
+                      </div>
+                    
+                    
+                    <Footer/>
                 </div>
+            </div>
             )
     }
 }
