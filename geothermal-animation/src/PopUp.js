@@ -18,7 +18,7 @@ class PopUp extends React.Component {
             }
             else if(this.props.season ==="Info"){
                 location = "whitespace"
-
+                
             }
             else {
                 location = 'geo-explained-winter'
