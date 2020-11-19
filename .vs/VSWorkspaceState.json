@@ -3,7 +3,8 @@
     "",
     "\\geothermal-animation",
     "\\geothermal-animation\\backend",
-    "\\geothermal-animation\\src"
+    "\\geothermal-animation\\src",
+    "\\geothermal-animation\\src\\pics"
   ],
   "SelectedNode": "\\geothermal-animation\\src\\Map.js",
   "PreviewInSolutionExplorer": false
