@@ -57,7 +57,16 @@ class Map extends React.Component {
 		const arrowData = this.state.listofarrows.map(item => <Arrows key={item._id} item={item} season={this.props.season} />)
 		const clickData = this.state.listofclick.map(area => <ClickAreas key={area._id} area={area} click={this.props.click} />)
 
-		let temp = require('./pics/warm_temp.png')
+		let season
+		if (this.props.season === 'Summer') {
+			season = "warm_temp"
+		}
+
+		else if (this.props.season === 'Winter') {
+			season = "cold_temp"
+		}
+
+		let temp = require('./pics/' + season + '.png')
 		const tempStyle = {
 			top: this.state.tempTop,
 			left: this.state.tempLeft
@@ -78,11 +87,14 @@ class Map extends React.Component {
 		let sun = null
 		if (this.props.season === 'Summer') {
 			let sunpic = require('./pics/sun.png')
-			sun = <img src={sunpic} alt="Sun" id="sun"
-				style={sunStyle}/>
+			sun = <img src={sunpic} alt="Sun" id="sun" style={sunStyle}/>
+			setInterval(rotateImg(sun),1000)
 		}
 
-
+		function rotateImg(prop){
+			console.log("Hello")
+			//this.style.transform =+ 23deg
+		}
 		return (
 			<div className="wrapper" id="map-container">
 				<MapInteractionCSS minScale={.5} translationBounds={this.state.trans} value={this.state.value} onChange={(value) => {
