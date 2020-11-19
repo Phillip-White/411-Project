@@ -23,16 +23,12 @@ class PopUp extends React.Component {
             }
             else if(this.props.season ==="Info"){
                 location = "whitespace"
-<<<<<<< HEAD
                 imgStyle = {
                     maxHeight: '70vh'
                    
                 }
                 popStyle = {maxHeight:'70vh'}
 
-=======
-                
->>>>>>> trial
             }
             else {
                 location = 'geo-explained-winter'
