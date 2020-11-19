@@ -11,18 +11,19 @@ body{
     font-size: 3vw;
     width: 20vw;
 }
-.wrapper {
-    position:relative;
-    top:0px;
-    left: 0px;
-}
+
 #map-container {
-    position: relative;
+    position: absolute;
     top:0px;
-    left: 0px;
+    left: 20vw;
 }
 #map {
     width:100%;
+}
+#arrow-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 #temp{
