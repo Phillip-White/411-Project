@@ -38,13 +38,13 @@
 }
 
 #pop-up{
-    max-height: 40vh;
+   
     width: 20vw;
     position:absolute;
     bottom:2vh;
 }
 #pop-up-image{
-    max-height:15vh;
+    
     max-width: 20vw;
 }
 #tab{

@@ -3,13 +3,14 @@
     "",
     "\\geothermal-animation",
     "\\geothermal-animation\\backend",
-    "\\geothermal-animation\\backend\\modules",
     "\\geothermal-animation\\backend\\routes",
     "\\geothermal-animation\\public",
+    "\\geothermal-animation\\public\\assets",
+    "\\geothermal-animation\\public\\assets\\img",
     "\\geothermal-animation\\src",
     "\\geothermal-animation\\src\\data",
     "\\geothermal-animation\\src\\pics"
   ],
-  "SelectedNode": "\\geothermal-animation\\src\\Summer.js",
+  "SelectedNode": "\\geothermal-animation\\src\\Sidebar.js",
   "PreviewInSolutionExplorer": false
 }
