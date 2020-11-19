@@ -8,14 +8,14 @@ class Footer extends React.Component {
                             <div className="col">
                                 <ul className="list-unstyled">
                                     <li><a href="https://www.southeastern.edu/">Southeastern Louisiana University</a></li>
-                                    <li>Winter</li>
+                                    <li></li>
                                 </ul>
                             </div>  
 
                             <div className="col">
                                 <ul className="list-unstyled">
-                                    <li>Summer</li>
-                                    <li>Winter</li>
+                                    <li><a href="http://www.southeastern.edu/admin/phys_plant/green/about/index.html">Sustainability</a></li>
+                                    <li></li>
                                 </ul>
                             </div> 
                     </div>
