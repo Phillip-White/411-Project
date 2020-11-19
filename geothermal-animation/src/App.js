@@ -12,9 +12,9 @@ class App extends React.Component {
             <main>
                 <Switch>
                     <Route path="/" component={Info} exact />
-                    <Route path="/Summer" component={Summer} />
-                    <Route path="/Winter" component={Winter} />
-                    <Route path="/Info" component={Info} />
+                    <Route path="/summer" component={Summer} />
+                    <Route path="/winter" component={Winter} />
+                    <Route path="/home" component={Info} />
                 </Switch>
                 
             </main>

@@ -1,34 +1,43 @@
-
+body{
+    overflow:hidden;
+}
 
 .page {
     display: grid;
-    grid: 98vh / 1fr 4fr;
-    overflow: hidden;
+    grid: 100vh / 1fr 4fr;
 }
 .season {
     text-align: center;
-    font-size:3vw;
+    font-size: 3vw;
     width: 20vw;
+}
 
+#map-container {
+    position: absolute;
+    top:0px;
+    left: 20vw;
 }
-#sun{
-    position:absolute;
+#map {
+    width:100%;
 }
-.wrapper {
-    overflow: auto;
-    position: relative;
+#arrow-container {
+    position: absolute;
     top: 0px;
     left: 0px;
 }
-#map-container {
-    position: relative;
-    top:0px;
-    left: 0px;
+
+#temp{
+    width: 30px;
+    position: absolute;
+
 }
-#map {
-    width:78vw;
+
+#sun{
+    position: absolute;
 }
+
 .arrow {
+    width:20px;
     position:absolute;
 }
 .area {
@@ -41,7 +50,7 @@
    
     width: 20vw;
     position:absolute;
-    bottom:2vh;
+    bottom:1vh;
 }
 #pop-up-image{
     
@@ -52,40 +61,15 @@
 
 }
 #words{
-    max-height:25vh;
+    max-height:24vh;
     font-size:.4em;
     width: 20vw;
     overflow:auto;
     text-align: justify;
     
 }
-#5{
-    display: inline-block;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
 
 ::-webkit-scrollbar{
     width: 0px;
     background: transparent;
-}
-
-.main-footer{
-    color:white;
-    background-color: rgb(73, 73, 73);
-    padding-top: 3cm;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-.page-container{
-    display:flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-.content-wrap{
-    flex: 1;
 }
