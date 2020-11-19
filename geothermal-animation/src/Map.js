@@ -14,13 +14,17 @@ class Map extends React.Component {
 		this.state = {
 			listofarrows: [],
 			listofclick: [],
+			value: {
+				scale: 1,
+				translation: { x: 0, y: 0 }
+			},
 			tempLeft: 5320,
 			tempTop: 3790,
 			trans: {
 				xMin: -(window.innerWidth * .6),
-				xMax: window.innerWidth * .6,
+				xMax: (window.innerWidth * .6),
 				yMin: -(window.innerHeight),
-				yMax: window.innerHeight * .8
+				yMax: (window.innerHeight * .8)
 			}
 		}
 	}
@@ -81,8 +85,18 @@ class Map extends React.Component {
 
 		return (
 			<div className="wrapper" id="map-container">
-				
-				<MapInteractionCSS minScale={.5} translationBounds={this.state.trans}>
+				<MapInteractionCSS minScale={.5} translationBounds={this.state.trans} value={this.state.value} onChange={(value) => {
+					this.setState({ value })
+					this.setState({
+						trans: {
+							xMin: -(((document.getElementById("map").width * this.state.value.scale) + document.getElementById("map").style.left.match(/\d+/g)) * .9),
+							xMax: (((window.innerWidth * .9) - document.getElementById("map").style.left.match(/\d+/g)) * .5),
+							yMin: -(((document.getElementById("map").height * this.state.value.scale) + document.getElementById("map").style.top.match(/\d+/g)) * .9),
+							yMax: ((window.innerHeight - document.getElementById("map").style.top.match(/\d+/g)) * .8)
+						}
+                    })
+				}
+				}>
 					<img alt="Schematic" src={Schematic} id="map" />
 					<img alt="Thermostat" style={tempStyle} src={temp} id="temp" />
 					<div id="arrow-container">

@@ -13,7 +13,7 @@ class Summer extends React.Component {
         }
         this.click = this.click.bind(this)
     }
-    
+
     //when a click area is clicked change the state to re-render page (popup)
     click(picture) {
         this.setState({
