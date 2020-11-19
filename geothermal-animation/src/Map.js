@@ -57,7 +57,16 @@ class Map extends React.Component {
 		const arrowData = this.state.listofarrows.map(item => <Arrows key={item._id} item={item} season={this.props.season} />)
 		const clickData = this.state.listofclick.map(area => <ClickAreas key={area._id} area={area} click={this.props.click} />)
 
-		let temp = require('./pics/warm_temp.png')
+		let season
+		if (this.props.season === 'Summer') {
+			season = "warm_temp"
+		}
+
+		else if (this.props.season === 'Winter') {
+			season = "cold_temp"
+		}
+
+		let temp = require('./pics/' + season + '.png')
 		const tempStyle = {
 			top: this.state.tempTop,
 			left: this.state.tempLeft
