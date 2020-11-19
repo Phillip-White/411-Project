@@ -79,12 +79,12 @@ class Map extends React.Component {
 		if (this.props.season === 'Summer') {
 			let sunpic = require('./pics/sun.png')
 			sun = <img src={sunpic} alt="Sun" id="sun" style={sunStyle}/>
-			setInterval(rotateImg,1000)
+			setInterval(rotateImg(sun),1000)
 		}
 
-		function rotateImg(){
+		function rotateImg(prop){
 			console.log("Hello")
-			sunpic.angle += 23deg
+			//this.style.transform =+ 23deg
 		}
 		return (
 			<div className="wrapper" id="map-container">
