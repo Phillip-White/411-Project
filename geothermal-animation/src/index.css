@@ -94,7 +94,7 @@ body{
     color: black;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: xxx-large;
 }
 .sidenav a:hover{
     background-color: #ddd;
@@ -104,7 +104,7 @@ body{
     background-color: #4CAF50;
     color: white;
   }
-  .main-footer{
+  .main-footer {
     color:white;
     background-color:#006633;
     padding-top: 0.5cm;
@@ -112,4 +112,8 @@ body{
     position: relative;
     bottom: 0;
     width: 100%;
+    font-size: x-large;
 }
+  .main-footer a{
+      color: white;
+  }
