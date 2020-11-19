@@ -47,13 +47,13 @@ body{
 }
 
 #pop-up{
-    max-height: 40vh;
+   
     width: 20vw;
     position:absolute;
     bottom:1vh;
 }
 #pop-up-image{
-    max-height:15vh;
+    
     max-width: 20vw;
 }
 #tab{
@@ -68,8 +68,48 @@ body{
     text-align: justify;
     
 }
-
 ::-webkit-scrollbar{
     width: 0px;
     background: transparent;
+}
+
+
+
+.page-container{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-left: 1cm;
+    padding-right: 2cm;
+    padding-bottom: 1cm;
+}
+.sidenav {
+    text-align: center;
+    font-size:3vw;
+    width: 20vw;
+    background-color: #F1F1F2;
+    
+}
+.sidenav a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.sidenav a:hover{
+    background-color: #ddd;
+    color: black;
+}
+.sidenav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .main-footer{
+    color:white;
+    background-color:#006633;
+    padding-top: 0.5cm;
+    padding-bottom: 0.5cm;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
